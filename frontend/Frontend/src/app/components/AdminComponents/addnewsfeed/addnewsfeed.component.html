@@ -1,0 +1,20 @@
+<div class="add-newsfeed-section">
+    <header>
+        <div class="heading">add news feed</div>
+    </header>
+    <form (ngSubmit)="addNews()">
+        <div class="text-editor">
+            <!-- <!-- <angular-editor [(ngModel)]="newsContent.content" [config]="editorConfig"  name="content"></angular-editor> -->
+
+            <ckeditor class="editor" [width]="600" [height]="600"    [(ngModel)]="editorContent.content" name="content"></ckeditor>
+            <!-- <jodit-editor ></jodit-editor> -->
+            <p class="validation-error" *ngIf="validation.contentFieldIsEmpty">please write news feed</p>
+            <p class="validation-error" *ngIf="validation.allFieldsEmpty">please write news feed</p>
+        </div>
+        <div class="button">
+            <button type="submit">add news</button>
+        </div>
+    </form>
+ 
+    
+</div>

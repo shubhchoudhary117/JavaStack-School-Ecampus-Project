@@ -1,0 +1,231 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+::ng-deep :root{
+    --comman-color:#3D5EE1;
+    --comman-white-color:#fff;
+    --profile-menu-color:#f7f7fa;
+    --comman-name-color:#1d1d1d;
+    --profile-name-font:'Roboto', sans-serif;
+    --menu-icon-color:#858ba8;
+    --comman-font:'Poppins', sans-serif;
+    --student-name:#febd2f;
+    --black-color:#333333;
+    --heading-font:  'Roboto', sans-serif;
+    --details-field-label:#657686;
+    --input-field-color:#f4f8fb;
+    --validation-error:#E91100;
+
+}
+
+.add-student-section{
+    width:97%;
+    padding: 10px;
+    margin-left: 7px;
+    padding-top: 14px;
+    box-sizing: border-box;
+    background-color: #fff;
+}
+.add-student-section .add-student-container{
+    width: 99%;
+    margin: auto;
+
+}
+.add-student-section .add-student-container .heading{
+    font-size: 1.5rem;
+    color: var(--black-color);
+    text-transform: capitalize;
+    margin-left: 12px;
+}
+.add-student-section .add-student-container .image-uploading-section{
+    width: 70%;
+    height: 130px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    margin-top: 10px;
+    
+ 
+}
+.student-added-success-popup{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.add-student-section .add-student-container .image-uploading-section .image-upload-box{
+    width: 150px;
+    height: 130px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+   
+}
+.add-student-section .add-student-container .image-uploading-section .image-upload-box .image{
+    width: 120px;
+    height:120px;
+    border-radius: 50%;
+    margin: auto;
+    position: relative;
+    background-color: var(--comman-color);
+}
+.add-student-section .add-student-container .image-uploading-section .image-upload-box .image input{
+    display: none;
+}
+.add-student-section .add-student-container .image-uploading-section .image-upload-box
+ .image .user-logo{
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%,-35%);
+}
+.add-student-section .add-student-container .image-uploading-section .image-upload-box
+ .image .user-logo img{
+    width: 100%;
+    height: 100%;
+ }
+ .add-student-section .add-student-container .image-uploading-section .image-upload-box
+ .image .upload-icon{
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #F4F8FB;
+    position: absolute;
+    bottom: 8px;
+    right: -6px;
+    border-radius: 50%;
+    cursor: pointer;
+ }
+ .add-student-section .add-student-container .image-uploading-section .image-upload-box
+ .image .upload-icon .icon{
+    color: var(--comman-color);
+    cursor: pointer;
+ }
+
+.add-student-section .add-student-container  .student-form{
+    width: 100%;
+    height: 390px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    overflow-y: scroll;
+}
+
+.add-student-section .add-student-container  .student-form .form-group{
+    width: 270px;
+    margin: 12px;
+}
+.add-student-section .add-student-container  .student-form .form-group .label{
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    color: var(--details-field-label);
+    margin-bottom: 5px;
+}
+.add-student-section .add-student-container  .student-form .form-group input{
+    width: 100%;
+    height: 35px;
+    border: none;
+    outline: none;
+    border: 1px solid rgb(209,209,209);
+    box-sizing: border-box;
+    padding-left: 10px;
+    background-color: var(--input-field-color);
+    font-size: 0.9rem;
+}
+.add-student-section .add-student-container  .student-form .address{
+    width: 100%;
+}
+.add-student-section .add-student-container  .student-form .address input{
+    width: 100%;
+    height: 45px;
+    font-size: 0.9rem;
+}
+.add-student-section .add-student-container  .student-form .form-group select{
+    width: 100%;
+    height: 35px;
+    border: none;
+    outline: none;
+    border: 1px solid rgb(209,209,209);
+    background-color: var(--input-field-color);
+    box-sizing: border-box;
+    padding-left: 10px;
+    font-size: 0.9rem;
+    text-transform:uppercase;
+    cursor: pointer;
+}
+.add-student-section .add-student-container  .student-form .form-group select option{
+    text-transform: capitalize;
+    cursor: pointer;
+}
+.add-student-section .add-student-container  .student-form .form-group select:focus{
+    border: 1px solid var(--comman-color);
+}
+.add-student-section .add-student-container  .student-form .form-group  .date-field input{
+    height: 100%;
+    font-size: 0.9rem;
+}
+.add-student-section .add-student-container  .student-form .form-group input:focus{
+    border: 1px solid var(--comman-color);
+}
+.add-student-section .add-student-container  .student-form .form-group  .validation-error{
+    font-size: 0.7rem;
+    font-family: var(--comman-font);
+    color: var(--validation-error);
+    text-transform: capitalize;
+}
+.add-student-section .add-student-container  .student-form .address-email-combo{
+    width: 100%;
+    display: flex;
+}
+.add-student-section .add-student-container  .student-form .address-email-combo .form-group{
+    width: 48%;
+}
+.add-student-section .add-student-container  .student-form .fees-model-selectbar{
+    width: 100%;
+    font-size: 1.2rem;
+    text-transform: capitalize;
+}
+.add-student-section .add-student-container  .student-form .fees-model-selectbar select{
+    text-transform: none;
+    font-size: 0.9rem;
+}
+.add-student-section .add-student-container  .student-form .address-email-combo 
+.fees-model-selectbar select{
+    width: 100%;
+}
+.add-student-section .add-student-container  .form-btn{
+    width: 140px;
+    height: 50px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 15px;
+}
+.add-student-section .add-student-container   .form-btn button{
+    width: 100%;
+    height: 45px;
+    border: none;
+    border-radius: 3px;
+    border: 1px solid var(--comman-color);
+    color: var(--black-color);
+    background-color: #fff;
+    text-transform: capitalize;
+    font-family: var(--comman-font);
+    font-weight: 600;
+    transition: ease all 0.5s;
+    cursor: pointer;
+}
+.add-student-section .add-student-container .form-btn button:hover{
+    background-color: var(--comman-color);
+    color: #fff;
+    cursor: pointer;
+}

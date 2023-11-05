@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Graduate&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Concert+One&family=Noto+Sans+Cherokee&family=Permanent+Marker&display=swap');
+
+::ng-deep * {
+    padding: 0px;
+    margin: 0px;
+}
+
+/* hsl(0deg 0% 96%) */
+::ng-deep :root {
+    --header-heading-color: #312623;
+    --header-text-color: #98908c;
+    --side-bar-color: rgb(245 247 250);
+    --comman-font: 'Poppins', sans-serif;
+    --close-sidebar-btn: #0d9fbf;
+    --white-color: #FFFFFF;
+    --img-border-color: #fff8f8;
+    --user-name-color: #2d2824;
+    --user-role-color: #b5b3b4;
+    --user-font: 'Graduate', cursive;
+    --sidebar-links-icon: #0d9fbf;
+    --sidebar-links-color: #363231;
+    --by-note-btn-color:#3c3c97;
+}
+
+.add-newsfeed-section{
+    width: 97%;
+    margin-left: 12px;
+    margin-top: 10px;
+    
+}
+
+.add-newsfeed-section header{
+    width: 100%;
+    display: flex;
+    padding: 12px 15px;
+}
+.add-newsfeed-section header .heading{
+    font-size: 1.4rem;
+    text-transform: capitalize;
+    color: var(--header-text-color);
+}
+
+.add-newsfeed-section .text-editor{
+    width: 97%;
+
+    margin: auto;
+   
+}
+ ::ng-deep .add-newsfeed-section .text-editor .editor{
+    min-width: 1200px !important;
+    min-height: 600px !important;
+}
+
+.add-newsfeed-section .text-editor .validation-error{
+    font-size: 0.8rem;
+    color: #E91100;
+}
+.add-newsfeed-section .button{
+    width: 100px;
+    height: 100px;
+    margin: auto;
+    margin-top: 20px;
+   
+}
+.add-newsfeed-section .button button{
+    width: 100px;
+    height: 40px;
+    color: var(--white-color);
+    background-color: var(--close-sidebar-btn);
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+}

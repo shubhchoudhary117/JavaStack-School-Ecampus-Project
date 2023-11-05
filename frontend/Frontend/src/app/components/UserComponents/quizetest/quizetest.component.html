@@ -1,0 +1,30 @@
+
+
+<section class="quizes-section">
+    <div class="quizes-container">
+        <div class="heading">Quize Test</div>
+        <div class="quizes-wrapper" >
+            <!-- --------------- card ----------------- -->
+            <mat-card class="mat-card" *ngFor="let quize of Quizes">
+                <mat-card-header class="card-header">
+                    <div mat-card-avatar class="header-image"></div>
+                    <mat-card-title class="quize-title">{{quize.title}}</mat-card-title>
+                    <mat-card-subtitle class="quize-description">{{quize.description}}</mat-card-subtitle>
+                </mat-card-header>
+                <mat-card-actions class="card-buttons" >
+                    <button mat-button color="accent" [routerLink]="['/student/dashboard/quize/start',quize.qid]">start</button>
+                    <button mat-button color="primary">questions:{{quize.numberofquestions}}</button>
+                   
+                </mat-card-actions>
+            </mat-card>
+            <!-- --------------- card ----------------- -->
+          
+              
+           
+
+           
+        </div>
+    </div>
+
+  
+</section>

@@ -1,0 +1,50 @@
+
+
+<section class="fees-receipt-section">
+    <header>
+      <div class="heading">fee receipt list</div>
+        <div class="select-session-field">
+            <label for="select">session year:</label>
+            <select id="select">
+                <option value="2020-2021">2020-2021</option>
+                <option value="2021-2022">2022-2023</option>
+                <option value="2022-2023">2023-2024</option>
+                <option value="2024-2025">2020-2021</option>
+            </select>
+        </div>
+        <div class="back-btn"><button (click)="goBack()">back</button></div>
+    </header>
+
+    <div class="receipts-table">
+        <div class="table">
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th>action</th>
+                        <th>sr</th>
+                        <th>voucher date</th>
+                        <th>voucher no</th>
+                        <th>Total Rec. Amount</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let feesRecipt of feesRecipts;let i=index">
+                        <td class="action" ><strong [routerLink]="['/fees-recipt-pdf',feesRecipt.sfid]">print</strong></td>
+                        <td>{{i+1}}</td>
+                        <td>{{feesRecipt.date}}</td>
+                        <td>{{feesRecipt.paymentid}}</td>
+                        <td>{{feesRecipt.paidfees}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="loader-layer" *ngIf="activeLoader">
+        <div class="loader" >
+            <ngx-spinner class="spinner"    [name]="spinnerName"
+             [type]="spinnerType" color="#3D5EE1" size="medium"></ngx-spinner>
+        </div>
+    </div>
+
+</section>

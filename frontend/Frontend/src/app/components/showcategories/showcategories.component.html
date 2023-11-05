@@ -1,0 +1,39 @@
+<mat-card class="mat-card">
+    <section class="show-category-section">
+        <div class="container">
+            <div class="heading">all categories</div>
+            <div class="categories">
+                <ul>
+                    <!-- start a category -->
+                    <li *ngFor="let c of categoriesData">
+                        <div class="category">
+                            <div class="icon"><mat-icon class="icon">category</mat-icon></div>
+                            <div class="category-content">
+                                <div class="title">{{c.title}}</div>
+                                <div class="description">{{c.description}}</div>
+                            </div>
+                        </div>
+                        <div class="divider"></div>
+                    </li>
+                    <!-- end  of category -->
+
+                    <!-- start a category -->
+                    <!-- <li>
+                        <div class="category">
+                            <div class="icon"><mat-icon class="icon">category</mat-icon></div>
+                            <div class="category-content">
+                                <div class="title">programming language</div>
+                                <div class="description">about programmin languages </div>
+                            </div>
+                        </div>
+                        <div class="divider"></div>
+                    </li> -->
+                    <!-- end  of category -->
+                </ul>
+            </div>
+            <div class="button">
+                <button mat-button [routerLink]="['/admin/add-category']">add category</button>
+            </div>
+        </div>
+    </section>
+</mat-card>

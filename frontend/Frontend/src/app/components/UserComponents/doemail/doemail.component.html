@@ -1,0 +1,37 @@
+
+
+<section class="do-email-section">
+    <div class="email-container">
+        <div class="email-heading">send mail to anyone</div>
+        <div class="email-form">
+            <form (ngSubmit)="sendMail()">
+            <div class="form-field">
+                <div class="label">to</div>
+                <select [(ngModel)]="emailData.to"   name="to" >
+                    <option  selected>select teacher</option>
+                    <option value="sanjay gupta">sanjay gupta</option>
+                    <option value="sanjay gupta">sanjay gupta</option>
+                    <option value="sanjay gupta">sanjay gupta</option>
+                </select>
+                <p *ngIf="validation.toIsRequired" class="validation-error">please choose reciver </p>
+                <p *ngIf="validation.allFieldsIsEmpty" class="validation-error">pleace choose reciver </p>
+            </div>
+            <div class="form-field">
+                <div class="label">subject</div>
+                <input [(ngModel)]="emailData.subject" type="email" placeholder="enter email" name="subject" >
+                <p *ngIf="validation.subjectIsRequired" class="validation-error">write subject of the email</p>
+                <p *ngIf="validation.allFieldsIsEmpty" class="validation-error">write subject of the email</p>
+            </div>
+            <div class="form-text-area">
+                <div class="label">description</div>
+                <textarea [(ngModel)]="emailData.description"  placeholder="description...." name="description" ></textarea>
+                <p *ngIf="validation.descriptionIsRequired" class="validation-error">write description</p>
+                <p *ngIf="validation.allFieldsIsEmpty" class="validation-error">write description</p>
+            </div>
+            <div class="form-btn">
+                <button type="submit"><mat-icon class="btn-icon">send</mat-icon> send</button>
+            </div>
+        </form>
+        </div>
+    </div>
+</section>

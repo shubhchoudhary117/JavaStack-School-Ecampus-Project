@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+::ng-deep {
+    margin: 0px;
+    padding: 0px;
+}
+::ng-deep :root{
+    --body-color:#f7f7fa;
+    --logo-font:'Roboto', sans-serif;
+    --menu-icon-color:#6f6f6f;
+    --active-link-color:#3D5EE1;
+}
+body{
+    width: 100%;
+    height: 100%;
+    background-color: var(--body-color);
+}
+.side-bar{
+    width: 280px;
+    height: 100vh;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    
+    background-color: #fff;
+}
+.side-bar .header{
+    width: 90%;
+    height: 60px;
+    margin: auto;
+    margin-top: 10px;
+}
+.side-bar .header .logo{
+    display: flex;
+    align-items: center;
+    margin-left: 6px;
+}
+.side-bar .header .logo .logo-name{
+    font-size: 1.3rem;
+    font-weight: 400;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding-top: 15px;
+}
+
+/* end of header ---------------------------- */
+.side-bar .menus-part{
+    margin-top: 10px;
+}
+.side-bar .menus-part ul li{
+    margin-left: 25px;
+    display: flex;
+    list-style: none;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.side-bar .menus-part ul  .active-menu{
+    color: var(--active-link-color);
+}
+
+.side-bar .menus-part ul li .icon-div .active-icon{
+    color: var(--active-link-color);
+}
+.side-bar .menus-part ul li  .link{
+    font-size: 0.9rem;
+    padding-top: 1px;
+    padding-left: 14px;
+    text-transform: capitalize;
+   
+}
+.side-bar .menus-part ul li  .active-link{
+    font-weight: 400;
+    color: var(--active-link-color);
+}

@@ -1,0 +1,105 @@
+<section class="start-quize-section" >
+    <div class="section-container">
+        <div class="quize-information-header">
+            <div class="information-card">
+                <div class="image"></div>
+                <div class="content">
+                    <div class="title">social science monthly test</div>
+                    <div class="date-time">start time : november 4:40</div>
+                </div>
+            </div>
+            <div class="button"><button mat-raised-button color="primary" [routerLink]="['/student/dashboard/quize/start/questions',quize_id]">start</button></div>
+        </div>
+        <div class="quize-instructions">
+            <div class="quize-instruction-container">
+                <div class="instruction-text">
+                    this is a monitored test.if you try to cheat you will
+                    be locked out of the test.For the test run smoothly
+                    make sure you follow thesinstructions.quize timing is 10:00 minuts
+                </div>
+                <div class="quize-instructions-wrapper">
+                    <div class="right-instructions">
+                        <div class="image-box">
+                            <div class="image">
+                                <span class="img"><img src="../../../../../assets/photos/book.png"
+                                        alt="image is loading"></span>
+                                <span class="right-logo"><img src="../../../../../assets/photos/right.png"
+                                        alt="loading...."></span>
+                            </div>
+                        </div>
+                        <div class="instructions-point">
+                            <div class="heading">do</div>
+                            <div class="points">
+                                <ul>
+                                    <li>
+                                        <div class="icon"> <mat-icon class="right-icon">done</mat-icon></div>
+
+                                        <span class="text">
+                                            Use chrome for best result </span>
+                                    </li>
+                                    <li>
+                                        <div class="icon"> <mat-icon class="right-icon">done</mat-icon></div>
+                                        <span class="text">close all another applications</span>
+                                    </li>
+                                    <li>
+                                        <div class="icon"> <mat-icon class="right-icon">done</mat-icon></div>
+                                        <span class="text">laptop is best for online test so use laptop avoid
+                                            mobile</span>
+                                    </li>
+                                    <li>
+                                        <div class="icon"> <mat-icon class="right-icon">done</mat-icon></div>
+                                        <span class="text">submit the test under the given time perioud</span>
+                                    </li>
+                                    <li>
+                                        <div class="icon"> <mat-icon class="right-icon">done</mat-icon></div>
+                                        <span class="text">alert the test proctor immediatetly if any issuse
+                                            arise</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="wrong-instructions">
+                        <div class="image-box">
+                            <div class="image">
+                                <span class="img"><img src="../../../../../assets/photos/book.png"
+                                        alt="image is loading"></span>
+                                <span class="wrong-logo"><img src="../../../../../assets/photos/crossimg.png"
+                                        alt="loading...."></span>
+                            </div>
+                        </div>
+                        <div class="instructions-point">
+                            <div class="heading">dont't</div>
+                            <div class="points">
+                                <ul>
+                                    <li>
+                                        <div class="icon"><mat-icon class="wrong-icon">clear</mat-icon></div>
+
+                                        <span class="text">Exit the test window until you handed in yout test</span>
+                                    </li>
+                                    <li>
+                                        <div class="icon"><mat-icon class="wrong-icon">clear</mat-icon></div>
+                                        <span class="text">Do not open any application or any other web page during the
+                                            test otherwise the test will be submitted automatically.</span>
+                                    </li>
+                                    <li>
+                                        <div class="icon"><mat-icon class="wrong-icon">clear</mat-icon></div>
+                                        <span class="text">do not off the newtwork connection during the test</span>
+                                    </li>
+                                    <li>
+                                        <div class="icon"><mat-icon class="wrong-icon">clear</mat-icon></div>
+                                        <span class="text">refresh your screen</span>
+                                    </li>
+
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="test-button">
+                    <button [routerLink]="['/student/dashboard/quize/start/questions',quize_id]">start test</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

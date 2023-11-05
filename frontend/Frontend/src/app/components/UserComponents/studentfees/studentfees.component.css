@@ -1,0 +1,358 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+::ng-deep :root{
+    --comman-color:#3D5EE1;
+    --comman-white-color:#fff;
+    --profile-menu-color:#f7f7fa;
+    --comman-name-color:#1d1d1d;
+    --profile-name-font:'Roboto', sans-serif;
+    --menu-icon-color:#858ba8;
+    --comman-font:'Poppins', sans-serif;
+    --student-name:#febd2f;
+}
+body{
+    overflow: hidden;
+}
+.fees-section{
+    width: 100%;  
+    height: 80vh;
+    margin-top: 10px;
+   
+}
+.fees-section .loader-layer{
+    width: 100%;
+    height: 100%;
+    z-index: 111;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.fees-section .fees-section-container{
+    width: 90%;
+    margin: auto;
+}
+header{
+    width: 100%;
+    margin: auto;
+    padding: 12px;
+    display: flex;
+    background-color: var(--comman-color);
+    box-sizing: border-box;
+}
+
+header .collage-name-and-student-name .collage-name{
+    text-transform: capitalize;
+    font-size: 1rem;
+    font-family: var(--comman-font);
+    color: var(--comman-white-color);
+}
+header .collage-name-and-student-name  .student-name{
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    margin-top: 3px;
+    font-family: var(--comman-font);
+    color: var(--student-name);
+}
+header .year{
+    margin-left: 20px;
+    font-size: 1rem;
+    color: var(--comman-white-color);
+}
+header .fees-heading{
+    font-size: 1.2rem;
+    font-family: var(--comman-font);
+    padding-left: 120px;
+    padding-top: 10px;
+    text-transform: capitalize;
+    color:#fef4c0;
+}
+.fees-section .student-details {
+    width: 100%;
+    margin: auto;
+    padding:5px 10px 5px 10px;
+    display: flex;
+    align-items: center;
+    background-color: #003963;
+    box-sizing: border-box;
+}
+.fees-section .student-details .studentName,.fatherName,.className,.scholarNumber,.sectionName{
+    font-size: 0.6rem;
+    font-weight: 300;
+    font-family: var(--comman-font);
+    text-transform: capitalize;
+    margin-right: 1px;
+  
+}
+.fees-section .student-details .student-name,.father-name,.class,.scholar-number,.section{
+    font-size: 0.6rem;
+    font-weight: 400;
+    color: var(--comman-white-color);
+    margin-right: 15px;
+    text-transform: uppercase;
+    cursor: pointer;
+    letter-spacing: 1px;
+    border-right: 1px solid #fff;
+    padding-right: 7px;
+}
+.fees-section .student-details .section{
+    border: none;
+}
+.fees-section .student-details .student-name:hover,.father-name:hover,.class:hover,.scholar-number:hover,.section:hover{
+    background-color: #3d5ee1b6;
+}
+.fees-section .student-details .divider{
+    width: 1px;
+    height: 17px;
+    background-color: #fff;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.fees-section .student-id-details table{
+    width: 100%;
+    border: 1px solid rgba(0,0,0,0.2);
+}
+.fees-section .student-id-details table thead tr th:nth-child(2){
+    width: 150px;
+}
+.fees-section .student-id-details table thead tr th:nth-child(4){
+    width: 150px;
+}
+.fees-section .student-id-details table thead tr th:nth-child(5){
+    width: 150px;
+}
+.fees-section .student-id-details table thead tr th:nth-child(7){
+    width: 120px;
+    display: flex;
+    align-items: center;
+    border: none;
+}
+.fees-section .student-id-details table thead tr th:nth-child(7) input{
+    margin-left: 5px;
+}
+.fees-section .student-id-details table thead tr th{
+    font-size: 0.7rem;
+    font-weight: 400;
+    margin-right: 3px;
+    border-right: 1px solid black;
+    padding-left: 3px;
+    padding-right: 3px;
+    text-transform: capitalize;
+}
+.fees-section  .fees-structure{
+    width: 100%;
+    display: flex;
+}
+.fees-section  .fees-structure .label{
+    width: 20px;
+    height: 150px;
+    background-color: var(--menu-icon-color);
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    box-sizing: border-box;
+    padding-top: 20px;
+    text-transform: uppercase;
+    color:var(--comman-white-color);
+    margin-right: 3px;
+    margin-top: 5px;
+}
+.fees-section  .fees-structure .fees-table{
+    width: 100%;
+    margin-top: 5px;
+}
+.fees-section  .fees-structure .fees-table table{
+    width: 100%;
+    height: 150px;
+    border-collapse: collapse;
+}
+
+.fees-section  .fees-structure .fees-table table th{
+    height: 25px;
+    text-transform: capitalize;
+    font-family: var(--comman-font);
+    font-size:0.8rem;
+    font-weight: 500;
+    padding-left: 5px;
+    text-align: start;
+}
+.fees-section  .fees-structure .fees-table table tbody tr td{
+    text-align:start;
+    padding-left: 5px;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+}
+.fees-section  .fees-structure .fees-table table tbody td:nth-child(2){
+    width: 300px;
+}
+.fees-section  .fees-structure .fees-table table th:nth-child(2){
+    width: 300px;
+}
+.fees-section  .fees-structure .fees-table table th:nth-child(1){
+    width: 60px;
+}
+
+/* .fees-section  .fees-structure .fees-table table th{
+    width: 100px;
+} */
+/* .fees-section  .fees-structure .fees-table table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+  } */
+
+  .fees-section .pay-fees-section{
+    width: 100%;
+    margin-top: 5px;
+    display: flex;
+    justify-content: space-between;
+  }
+  .fees-section .pay-fees-section .fees-pay-and-fees-instruction {
+    width: 55%;
+    height: 200px;
+    border: 1px solid rgba(0,0,0,0.1);
+  }
+  .fees-section .pay-fees-section .fees-pay-and-fees-instruction .payment-mode-heading{
+    width: 100%;
+    height: 30px;
+    background-color:#a1e1fa;
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+    font-size: 0.8rem;
+    text-transform: capitalize;
+    font-family: var(--comman-font);
+    box-sizing: border-box;
+    color: var(--comman-name-color);
+  }
+  .fees-section .pay-fees-section .fees-pay-and-fees-instruction .payment-mode-heading button{
+    width: 110px;
+    height: 25px;
+    font-size: 0.7rem;
+    text-transform: capitalize;
+    padding: 3px;
+    font-family: var(--comman-font);
+  }
+  .fees-section .pay-fees-section .fees-pay-and-fees-instruction  .total-payment-pay-heading{
+    width: 100%;
+    display: flex;
+    background-color:#a1e1fa;
+    margin-top: 2px;
+  }
+  .fees-section .pay-fees-section .fees-pay-and-fees-instruction  .total-payment-pay-heading .title{
+    width: 40%;
+    height: 33px;
+    border-right: 1px solid rgba(0,0,0,0.1);
+    padding-left: 10px;
+    text-transform: capitalize;
+    font-size: 0.8rem;
+    font-family: var(--comman-font);
+    display: flex;
+    align-items: center;
+    color: var(--comman-name-color);
+  }
+  .fees-section .pay-fees-section .fees-pay-and-fees-instruction  .total-payment-pay-heading .total-ammount{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding-left: 5px;
+  }
+  .fees-section .pay-fees-section .fees-pay-and-fees-instruction  .total-payment-pay-heading .total-ammount input{
+    width: 80px;
+    height: 25px;
+    border: none;
+    font-family: var(--comman-font);
+    font-size: 0.8rem;
+    box-sizing: border-box;
+    text-align: center;
+  }
+.fees-section .pay-fees-section .pay-buttons{
+    width: 100%;
+    height: 35px;
+    background-color: #fef4c0;
+    display: flex;
+    margin-top: 5px;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(0,0,0,0.1);
+}
+.fees-section .pay-fees-section .pay-buttons .pay-payment-btn button{
+    width: 150px;
+    height: 25px;
+    font-size: 0.7rem;
+    font-family: var(--comman-font);
+    text-transform: capitalize;
+    background-color: var(--comman-color);
+    border: none;
+    color: var(--comman-white-color);
+    cursor: pointer;
+    border-radius: 1px;
+}
+.fees-section .pay-fees-section .pay-buttons .exit-btn button{
+    width: 60px;
+    height: 25px;
+    margin-left: 10px;
+    font-size: 0.7rem;
+    font-family: var(--comman-font);
+    text-transform: capitalize;
+    background-color: var(--comman-color);
+    border: none;
+    color: var(--comman-white-color);
+    cursor: pointer;
+    border-radius: 1px;
+}
+.fees-section .pay-fees-section .note{
+    width: 100%;
+    padding-top: 2px;
+}
+.fees-section .pay-fees-section .note .heading{
+    padding-left: 2px;
+    text-transform: capitalize;
+    color: #E01100;
+}
+.fees-section .pay-fees-section .note .notes{
+    margin-left: 15px;
+}
+.fees-section .pay-fees-section .note .notes ol li{
+    font-size: 0.7rem;
+    line-height: 12px;
+    margin-top: 3px;
+    color: #E01100;
+}
+
+.fees-section  .pay-fees-section .total-fees-section{
+    width: 40%;
+    height: 200px;
+   
+}
+.fees-section  .pay-fees-section .total-fees-section .fees-details{
+    width: 100%;
+    height: 60px;
+    display: flex;
+    background-color: #ffa197;
+    justify-content: space-between;
+}
+.fees-section  .pay-fees-section .total-fees-section .fees-details .detail{
+    width: 130px;
+    height: 60px;
+    margin-top: 5px;
+    margin-right: 5px;
+}
+.fees-section  .pay-fees-section .total-fees-section .fees-details .detail .fees-heading{
+    font-size: 0.8rem;
+    text-transform: capitalize;
+    padding-left: 5px;
+    color: #f7f7fa;
+}
+.fees-section  .pay-fees-section .total-fees-section .fees-details .detail button{
+    width: 80px;
+    height: 25px;
+   font-size: 0.8rem;
+    margin-top: 5px;
+   margin-left: 10px;
+   border: none;
+   
+
+}
+/* <div class="fee-value">80000</div> */

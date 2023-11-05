@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Roboto+Slab&display=swap');
+::ng-deep *{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+::ng-deep :root{
+    --nav-color:#0D9fbf;
+    --heading-color:#0D9fbf;
+    --white-color:#ffffff;
+    --comman-font:'Poppins', sans-serif;
+    --comman-color:#0D9fbf;
+    --comman-text-color:#52525a;
+}
+header{
+    width: 100%;
+    height: 50px;
+    background-color: var(--nav-color);
+}
+header nav{
+    width: 90%;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+header nav .logo{
+    font-size: 1.3rem;
+    font-family: 'Roboto Slab', serif;
+    color: var(--white-color);
+}
+/* style the menus */
+header nav .menus{
+    display: flex;
+    align-items: center;
+}
+header nav .menus ul{
+    list-style: none;
+    display: flex;
+}
+header nav .menus ul li{
+    padding: 12px 20px;
+}
+header nav .menus ul li a{
+    font-size: 0.8rem;
+    text-decoration: none;
+    text-transform: capitalize;
+    color: var(--white-color);
+    font-family: var(--comman-font);
+}
+header nav  .buttons{
+    display: flex;
+    align-items: center;
+}
+header nav  .buttons button{
+    width: 80px;
+    height: 35px;
+   
+    border: none;
+    border-radius: 5px;
+    background-color: var(--white-color);
+    margin-right: 20px;
+    cursor: pointer;
+   
+}
+header nav  .buttons button a{
+    text-decoration: none;
+    text-transform: capitalize;
+    color: var(--comman-text-color);
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+}

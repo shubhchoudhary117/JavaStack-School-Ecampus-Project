@@ -1,0 +1,165 @@
+<section class="student-profile-section">
+    <header>
+        <div class="heading">profile</div>
+        <div class="page-path">/dashboard/<span class="current-path">profile</span></div>
+    </header>
+    <div class="profile-template" *ngIf="!activeLoader">
+        <div class="profile-container">
+            <div class="profile">
+                <div class="profile-image">
+                    <img src="../../../../assets/photos/user.webp" alt="image is loading">
+                </div>
+                <div class="profile-details">
+                    <div class="student-name">{{StudentDetails.studentname}} </div>
+                    <div class="student-branch">b.tech computer science</div>
+                    <div class="student-lavel">Sunior Student-BE 6Sem</div>
+                </div>
+
+            </div>
+        </div>
+        <div class="profile-footer"><div class="edite-button"><button (click)="openEditeProfileTemplate()">edite </button></div></div>
+    </div>
+    <div class="profile-details-template" *ngIf="!activeLoader">
+        <div class="header">
+            <div class="heading">personal details</div>
+            <div class="active-logo"><mat-icon class="icon">check_circle</mat-icon></div>
+        </div>
+        <div class="details-container">
+            <div class="detail">
+                <div class="label">name</div>
+                <div class="value">{{StudentDetails.studentname}}</div>
+            </div>
+            <div class="detail">
+                <div class="label">date of birth</div>
+                <div class="value">{{StudentDetails.birthdate}}</div>
+            </div>
+            <div class="detail">
+                <div class="label">email id</div>
+                <div class="value">{{StudentDetails.email}}</div>
+            </div>
+            <div class="detail">
+                <div class="label">mobile</div>
+                <div class="value">+91{{StudentDetails.mobile}}</div>
+            </div>
+            <div class="detail">
+                <div class="label">address</div>
+                <div class="value">{{StudentDetails.address}}</div>
+            </div>
+        </div>
+    </div>
+ 
+    <!-- update profile template -------------------------------------------------- -->
+    <div class="update-profile-template" id="edite-template">
+        <div class="header">
+            <nav>
+                <div class="heading">edite profile</div>
+                <div class="close-icon">
+                    <mat-icon class="icon" (click)="closeEditeTemplate()">clear</mat-icon>
+                </div>
+            </nav>
+            <div class="divider-line"></div>
+        </div>
+
+        <div class="image-upload-section">
+            <div class="image-upload-box">
+                <div class="image">
+                    <div class="user-logo"><img src="../../../../assets/photos/usericon.png.png" alt=""></div>
+                    <div class="upload-icon"><mat-icon class="icon">add_a_photo</mat-icon></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="navigation-links">
+            <div class="links">
+                <ul>
+                    <li><a class="active active-link-text">personal details</a></li>
+
+                </ul>
+            </div>
+        </div>
+        <form (ngSubmit)="doUpdateStudentProfile()">
+        <div class="personal-details-form">
+            <div class="form-scroller">
+                <div class="form-container">
+                    <div class="form-field">
+                        <div class="label">full name</div>
+                        <input name="fullname" disabled   [value]="StudentDetails.studentname" >
+                    </div>
+                    <div class="form-field">
+                        <div class="label">username</div>
+                        <input name="fullname" [value]="StudentDetails.enrollment" >
+                    </div>
+                    <div class="form-field">
+                        <div class="label">email</div>
+                        <input type="text" [(ngModel)]="detailsObj.email" name="email" >
+                        <p class="validation-error" *ngIf="formValidation.emailFieldEmpty">email  is required*</p>
+                        <p class="validation-error" *ngIf="formValidation.allFieldsIsEmpty">email  is required*</p>
+                    </div>
+                    <div class="form-field">
+                        <div class="label">birth date</div>
+                        <input type="datetime" [(ngModel)]="detailsObj.birthdate" name="birthdate">
+                        <p class="validation-error" *ngIf="formValidation.birthdateFieldEmpty">birthdate  is required*</p>
+                        <p class="validation-error" *ngIf="formValidation.allFieldsIsEmpty">birthdate  is required*</p>
+                    </div>
+                   
+                    <div class="form-field">
+                        <div class="label">mobile</div>
+                        <input type="number" [(ngModel)]="detailsObj.mobile" maxlength="10" name="mobile" >
+                        <p class="validation-error" *ngIf="formValidation.mobileFieldEmpty">mobile  is required*</p>
+                        <p class="validation-error" *ngIf="formValidation.allFieldsIsEmpty">mobile  is required*</p>
+                    </div>
+                    <div class="form-field">
+                        <div class="label">gender</div>
+                        <select name="gender" id="gender" [(ngModel)]="detailsObj.gender" aria-placeholder="select gender">
+                            <option value="select gender" selected>select gender</option>
+                            <option value="male">male</option>
+                            <option value="female">female</option>
+                        </select>
+                        <p class="validation-error" *ngIf="formValidation.genderFieldEmpty">gender  is required*</p>
+                        <p class="validation-error" *ngIf="formValidation.allFieldsIsEmpty">gender  is required*</p>
+                    </div>
+                    <div class="form-address-field">
+                        <div class="label">address</div>
+                        <input type="text" [(ngModel)]="detailsObj.address" name="address" >
+                        <p class="validation-error" *ngIf="formValidation.addressFieldEmpty">address  is required*</p>
+                        <p class="validation-error" *ngIf="formValidation.allFieldsIsEmpty">address  is required*</p>
+                    </div>
+                    <div class="form-field">
+                        <div class="label">category</div>
+                        <select name="category" [(ngModel)]="detailsObj.category" class="category-select"  aria-placeholder="select gender">
+                            <option value="select gender" selected>category</option>
+                            <option value="female">General</option>
+                            <option value="OBC">OBC</option>
+                            <option value="SC">SC</option>
+                            <option value="ST">ST</option>
+                        </select>
+                        <p class="validation-error" *ngIf="formValidation.categoryFieldEmpty">category  is required*</p>
+                        <p class="validation-error"  *ngIf="formValidation.allFieldsIsEmpty">category  is required*</p>
+                    </div>
+                    <div class="form-field">
+                        <div class="label">village</div>
+                        <input [(ngModel)]="detailsObj.village" type="text" name="village">
+                        <p class="validation-error" *ngIf="formValidation.villageFieldEmpty">village  is required*</p>
+                        <p class="validation-error" *ngIf="formValidation.allFieldsIsEmpty">village  is required*</p>
+                    </div>
+                   
+                </div>
+          
+            </div>
+            <!-- ------------------------- end of scroller ---------------------- -->
+            <div class="form-btns">
+                <button type="submit">save</button>
+            </div>
+        </div>
+    </form>
+
+    </div>
+
+    <!-- <div class="loader-layer" *ngIf="activeLoader">
+        <div class="loader" >
+            <ngx-spinner class="spinner"    [name]="spinnerName"
+             [type]="spinnerType" color="#3D5EE1" size="medium"></ngx-spinner>
+        </div>
+    </div> -->
+  
+</section>

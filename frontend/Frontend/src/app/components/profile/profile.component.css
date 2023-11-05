@@ -1,0 +1,261 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap');
+*{
+    margin: 0px;
+    padding: 0px;
+}
+::ng-deep body{
+    width: 100vw;
+    height: 100vh;
+    background-color: #f5f5f5;
+}
+::ng-deep :root{
+    --heading-color:#ababab;
+    --white-color:#ffffff;
+    --comman-font:'Poppins', sans-serif;
+    --comman-btn:#0D9fbf;
+    --comman-color:#0D9fbf;
+    --label-color:#52525a;
+    --about-text-color:#878787;
+    --about-user-text:#c3c3c3;
+    --field-error-color:#E91100;
+    --comman-text-color:#8a8a8a;
+    --profile-card-shadow:0px 2px 1px -1px rgb(0 0 0 / 20%), 0px 1px 1px 0px rgb(0 0 0 / 14%), 0px 1px 3px 0px rgb(0 0 0 / 12%);
+}
+.profile-section{
+    width: 97%;
+    margin-left: 12px;
+    margin-top: 10px;
+   
+}
+.profile-section .profile-card{
+    width: 98%;
+    height: 400px;
+    background-color: #fff;
+    margin: auto;
+    box-shadow: var(--profile-card-shadow);
+    padding: 10px;
+}
+.profile-section .profile-card .header{
+    width: 98%;
+    margin: auto;
+    display: flex;
+}
+.profile-section .profile-card .header .profile-image{
+    width: 100px;
+    height: 100px;
+    border-radius: 20px;
+    margin-top: 10px;
+}
+.profile-section .profile-card .header .profile-image img{
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+}
+.profile-section .profile-card .header .profile-content{
+    margin-left: 20px;
+    margin-top: 10px;
+}
+.profile-section .profile-card .header .profile-content .admin-name{
+    font-size: 1.4rem;
+    color: var(--comman-btn);
+   padding-top: 3px;
+   text-transform: capitalize;
+   font-weight: 600;
+   font-family: var(--comman-font);
+}
+.profile-section .profile-card .header .profile-content .admin-lavel{
+    margin-top: -12px;
+    color: var(--about-user-text);
+    font-size: 0.7rem;
+    font-family: var(--comman-font);
+    text-transform: capitalize;
+    padding-left: 4px;
+}
+.profile-section .profile-card .header .profile-content  .about-admin .heading{
+    font-size: 0.9rem;
+    color:var(--heading-color);
+    text-transform: capitalize;
+}
+.profile-section .profile-card .header .profile-content  .about-admin  .about-admin-description{
+    width: 340px;
+    font-size: 0.7rem;
+    font-family: var(--comman-font);
+    text-transform: capitalize;
+    color: var(--comman-text-color);
+}
+.profile-section .profile-card .header  .admin-education{
+    margin-left: 25px;
+    padding-top: 73px;
+}
+.profile-section .profile-card .header  .admin-education .highest-qualification{
+    font-size: 0.9rem;
+    color: var(--heading-color);
+    text-transform: capitalize;
+}
+.profile-section .profile-card .header  .admin-education .qualification{
+    font-size: 0.7rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-top: -12px;
+    color: var(--comman-text-color);
+}
+.profile-section .profile-card .header  .teaching-experience{
+    margin-left: 25px;
+    padding-top: 73px;
+}
+.profile-section .profile-card .header .experience-heading{
+    font-size: 0.9rem;
+    color: var(--heading-color);
+    text-transform: capitalize;
+}
+.profile-section .profile-card .header  .experience-year{
+    font-size: 0.7rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-top: -12px;
+    color: var(--comman-text-color);
+}
+
+.profile-section .profile-card .job-details-section{
+    width: 90%;
+    display: flex;
+    margin: auto;
+}
+.profile-section .profile-card .job-details-section .job-details{
+    margin-left: 75px;
+}
+.profile-section .profile-card .job-details-section .job-details .heading{
+    margin-top: 10px;
+    display: flex;
+    font-size: 0.9rem;
+    color: var(--heading-color);
+    text-transform: capitalize;
+    font-family: var(--comman-font);
+}
+.profile-section .profile-card .job-details-section .job-details .heading .icon{
+    margin-right: 13px;
+    color: var(--comman-color);
+}
+.profile-section .profile-card .job-details-section .job-details .details{
+    padding-left: 12px;
+    margin-top: 10px;
+}
+.profile-section .profile-card .job-details-section .job-details .details ul{
+    list-style: none;
+}
+.profile-section .profile-card .job-details-section .job-details .details ul li:not(:nth-child(1)){
+    margin-top: -10px;
+}
+.profile-section .profile-card .job-details-section .job-details .details ul li .detail .type{
+    text-transform: capitalize;
+    font-size: 0.8rem;
+    color: #878787;
+    margin-right: 5px;
+}
+.profile-section .profile-card .job-details-section .job-details .details ul li .detail{
+    color: #636363;
+    font-size: 0.7rem;
+    font-family: var(--comman-font);
+}
+/* end of profile details section  */
+.profile-section .profile-card .job-details-section .other-details{
+    margin-left: 75px;
+}
+.profile-section .profile-card .job-details-section .other-details .heading{
+    margin-top: 10px;
+    display: flex;
+    font-size: 0.9rem;
+    color: var(--heading-color);
+    text-transform: capitalize;
+    font-family: var(--comman-font);
+}
+.profile-section .profile-card .job-details-section .other-details .heading .icon{
+    margin-right: 13px;
+    color: var(--comman-color);
+}
+
+.profile-section .profile-card .job-details-section .other-details  .details{
+    padding-left: 12px;
+    margin-top: 10px;
+}
+.profile-section .profile-card .job-details-section .other-details  .details ul{
+    list-style: none;
+}
+.profile-section .profile-card .job-details-section .other-details  .details ul li:not(:nth-child(1)){
+    margin-top: -10px;
+}
+.profile-section .profile-card .job-details-section .other-details  .details ul li .detail .type{
+    text-transform: capitalize;
+    font-size: 0.8rem;
+    color: #878787;
+    margin-right: 5px;
+}
+.profile-section .profile-card .job-details-section .other-details  .details ul li .detail{
+    font-size: 0.7rem;
+    font-family: var(--comman-font);
+    color: #636363;
+}
+.profile-section .profile-card .job-details-section .ranking-box{
+    width: 150px;
+    height: 150px;
+    margin-left: 40px;
+    position: relative;
+    
+}
+.profile-section .profile-card .job-details-section .ranking-box .circular-reprogress{
+    width: 130px;
+    height: 130px;
+    position: relative;
+    background:conic-gradient(#0D9fbf 30deg,#ededed 0deg);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* /transition: ease all 10s; */
+  
+}
+.profile-section .profile-card .job-details-section .ranking-box .circular-reprogress::after{
+    position: absolute;
+    content: "";
+    width: 100px;
+    height: 100px;
+    background-color: #fff;
+    border-radius: 50%;
+   
+}
+.profile-section .profile-card .job-details-section .ranking-box  .value{
+    font-size: 1.4rem;
+    color: var(--comman-color);
+    font-weight: 600;
+    position: absolute;
+    top: 43%;
+    left: 45%;
+    transform: translate(-45%,-43%);
+}
+.profile-section .profile-card .job-details-section .ranking-box .label{
+    font-size: 0.8rem;
+    text-transform: capitalize;
+    color: var(--label-color);
+    text-align: center;
+    padding-top: 10px;
+    margin-right: 10px;
+    font-family: var(--comman-font);
+}
+/* end of other details section ------------------- */
+/* .profile-section .profile-card  footer{
+    width: 100%;
+    padding: 10px;
+    border: 1px solid red;
+    position: relative;
+    margin-top: 60px;
+}
+.profile-section .profile-card  footer .social-links{
+    position: absolute;
+    right: 30px;
+    bottom: 0px;
+}
+.profile-section .profile-card  footer .social-links ul{
+    list-style: none;
+    display: flex;
+    align-items: center;
+} */
+

@@ -1,0 +1,88 @@
+<section class="profile-section">
+    <div class="profile-card">
+        <div class="header">
+            <div class="profile-image"><img src="../../../assets/photos/user.webp"
+                    alt="image is loading please weait.....">
+            </div>
+            <div class="profile-content">
+                <div class="profile-details">
+                    <h4 class="admin-name">{{adminDetails.adminDetails.name}}</h4>
+                    <p class="admin-lavel">{{adminDetails.adminDetails.adminTeachingStatus}}</p>
+                </div>
+                <div class="about-admin">
+                    <h5 class="heading">about</h5>
+                    <p class="about-admin-description">{{adminDetails.adminDetails.about}}</p>
+                </div>
+            </div>
+            <div class="admin-education">
+                <h4 class="highest-qualification">highest qualification</h4>
+                <h6 class="qualification">{{adminDetails.adminDetails.highestQualification}}</h6>
+            </div>
+            <div class="teaching-experience">
+                <h4 class="experience-heading">experience</h4>
+                <h6 class="experience-year">{{adminDetails.adminDetails.yearOfExperience}}</h6>
+            </div>
+         
+        </div>
+        <div class="job-details-section">
+            <div class="job-details">
+                <div class="heading"><mat-icon class="icon">school</mat-icon>job details</div>
+                <div class="details">
+                    <ul>
+                        <li>
+                            <p class="detail"><span class="type">employeement type :</span>{{adminDetails.adminDetails.employeementType}}</p>
+                        </li>
+                        <li>
+                            <p class="detail"><span class="type">joining date :</span>{{adminDetails.adminDetails.joiningDate}}</p>
+                        </li>
+                        <li>
+                            <p class="detail"><span class="type">email :</span>{{adminDetails.adminDetails.email}}</p>
+                        </li>
+                        <li>
+                            <p class="detail"><span class="type">mobile :</span>+91 {{adminDetails.adminDetails.mobile}}</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="other-details">
+                <div class="heading"><mat-icon class="icon">info</mat-icon>other</div>
+                <div class="details">
+                    <ul>
+                        <li>
+                            <p class="detail"><span class="type">employeement role :</span>{{adminDetails.adminDetails.role}}</p>
+                        </li>
+                        <li>
+                            <p class="detail"><span class="type">employeement id :</span>{{adminDetails.adminDetails.employeeId}}</p>
+                        </li>
+                        <li>
+                            <p class="detail"><span class="type">stutas:</span>active</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="ranking-box">
+                <div class="circular-reprogress" id="progress-circular"></div>
+                <div class="value" >{{rank}}%</div>
+                <div class="label">ranking in institute</div>
+            </div>
+        </div>
+        <!-- <footer>
+            <div class="social-links">
+                <ul>
+                    <li><mat-icon>facebook</mat-icon></li>
+                    <li><mat-icon>twitter</mat-icon></li>
+                </ul>
+            </div>
+        </footer> -->
+    </div>
+
+    <!-- update profile template -------------------------------------------------- -->
+    <div class="update-profile-template">
+        <div class="header">
+            <div class="heading">profile</div>
+            <div class="close-icon">
+                <mat-icon>times</mat-icon>
+            </div>
+        </div>
+    </div>
+</section>

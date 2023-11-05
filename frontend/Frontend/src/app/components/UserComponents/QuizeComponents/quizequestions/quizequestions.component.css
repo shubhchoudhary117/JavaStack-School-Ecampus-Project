@@ -1,0 +1,277 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+::ng-deep :root{
+    --comman-color:#3D5EE1;
+    --comman-white-color:#fff;
+    --profile-menu-color:#f7f7fa;
+    --comman-name-color:#1d1d1d;
+    --profile-name-font:'Roboto', sans-serif;
+    --menu-icon-color:#858ba8;
+    --comman-font:'Poppins', sans-serif;
+    --popins-font:'Poppins', sans-serif;;
+    --student-name:#febd2f;
+    --black-color:#333333;
+    --heading-font:  'Roboto', sans-serif;
+    --details-field-label:#657686;
+    --input-field-color:#f4f8fb;
+    --roboto-font:'Roboto', sans-serif;
+    --placeholder-color:#7d797a;
+}
+.swal2-title {
+    font-size: 22rem !important;
+    font-family: Georgia, serif;
+  }
+.test-questions-section{
+    width: 100%;
+    padding: 5px;
+    padding-left: 0px;
+    box-sizing: border-box;
+
+}
+.test-questions-section .start-timer{
+    width: 100%;
+    height: 80vh;
+    position: absolute;
+    background-color: #fff;
+}
+.test-questions-section .start-timer .timer{
+    width: 200px;
+    height: 200px;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.test-questions-section .quize-result{
+    width:100%;
+    margin: auto;
+    padding: 10px;
+    background-color: #fff;
+    box-sizing: border-box;
+    margin: 0px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    
+}
+.test-questions-section .quize-result .result-container{
+    width: 70%;
+    margin: auto;
+     margin-top: 20px;
+     text-align: center;
+  
+ }
+  
+
+.test-questions-section .quize-result .result-container .heading{
+    width: 80%;
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--comman-color);
+    text-align: center;
+    margin: auto;
+    text-transform: capitalize;
+    text-align: center;
+}
+
+.test-questions-section .quize-result .result-container .result-wrapper{
+    width: 80%;
+    margin: auto;
+    margin-top: 30px;
+    text-align: center;
+}
+.test-questions-section .quize-result .result-container .result-wrapper .result{
+    width: 100%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 15px;
+}
+.test-questions-section .quize-result .result-container .result-wrapper .result .label{
+    font-size: 0.9rem;
+    font-family: var(--roboto-font);
+    color: rgb(109 109 109);
+    text-transform: capitalize;
+    justify-content: center;
+    font-weight: 600;
+}
+.test-questions-section .quize-result .result-container .result-wrapper .result .value{
+
+    font-size: 0.9rem;
+    font-family: var(--roboto-font);
+    color: rgb(109 109 109);
+    text-transform: capitalize;
+    font-weight: 600;
+    padding-left: 10px;
+}
+.test-questions-section .quize-result .result-container  .divider{
+    width: 80%;
+    height: 1px;
+    margin: auto;
+    background-color: var(--comman-color);
+    margin-top: 20px;
+}
+.test-questions-section .quize-result .result-container .passing-instruction{
+    width: 80%;
+    padding: 10px;
+    margin: auto;
+    margin-top: 5px;
+ 
+ 
+}
+.test-questions-section .quize-result .result-container .passing-instruction .result-box{
+    width: 300px;
+    margin: auto;
+ 
+}
+.test-questions-section .quize-result .result-container .passing-instruction .result-box .label{
+    width: 100%;
+    text-align: center;
+    font-size: 1.1rem;
+    font-family: var(--roboto-font);
+    font-weight: 600;
+    color: var(--comman-name-color);
+    text-transform: capitalize;
+}
+.test-questions-section .quize-result .result-container .passing-instruction .result-box .value{
+    font-size: 0.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #333333ea;
+    padding-top: 10px;
+    padding-right: 5px;
+    font-weight: 600;
+    font-family: var(--roboto-font);
+    text-transform: capitalize;
+}
+.test-questions-section .quize-result .result-container .passing-instruction .result-box .value .fail-icon{
+    color: #E91100;
+}
+.test-questions-section .quize-result .result-container .passing-instruction .result-box .value
+ .pass-icon{
+    color: green;
+    padding-right: 5px;
+}
+.test-questions-section .quize-result .result-container  .message{
+    width: 100%;
+    font-size: 0.8rem;
+    margin: auto;
+    margin-top: 20px;
+    font-family:var(--popins-font);
+    color: #7d797a;
+    padding: 10px;
+}
+.test-questions-section .quize-result .result-container .button button{
+    margin: auto;
+    margin-top: 10px;
+}
+.test-questions-section .test-questions-container{
+    width: 90%;
+    margin: auto;
+    padding: 10px;
+}
+
+.test-questions-section .test-questions-container  .test-question-header{
+    width: 100%;
+    border-radius: 5px;
+    margin: auto;
+    background-color: #fff;
+}
+
+.test-questions-section .test-questions-container .test-question-header .border{
+    width: 100%;
+    height: 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    background-color: var(--comman-color);
+}
+.test-questions-section .test-questions-container .test-question-header .heading{
+    font-size: 1.7rem;
+    text-transform: capitalize;
+    font-family: var(--roboto-font);
+    font-weight: 500;
+    color: #1d1d1d;
+    padding: 15px;
+    padding: 13px;
+}
+.test-questions-section .test-questions-container .test-question-header .divider{
+    width: 100%;
+    height: 1px;
+    background-color: #ccc;
+}
+.test-questions-section .test-questions-container .test-question-header .email{
+    padding: 13px;
+    padding-top: 15px;
+    font-size: 0.9rem;
+    font-family: var(--roboto-font);
+    color: #657686;
+}
+.test-questions-section .test-questions-container .test-question-header .required{
+    padding: 13px;
+    font-size: 0.9rem;
+    font-family: var(--roboto-font);
+    color: #657686;
+    text-transform: capitalize;
+    color: #E91100;
+}
+.test-questions-section .test-questions-container .questions{
+    width: 100%;
+    margin-top: 10px;
+
+}
+.test-questions-section .test-questions-container .buttons{
+    width:100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: auto;
+    margin-top: 10px;
+}
+.test-questions-section .test-questions-container .buttons button:nth-child(2){
+    color: var(--comman-color);
+    text-transform: capitalize;
+    font-family: var(--roboto-font);
+}
+.test-questions-section .test-questions-container .questions .question-card{
+    width: 100%;
+    padding: 20px;
+    padding-left: 25px;
+    margin: auto;
+    box-sizing: border-box;
+    background-color: #fff;
+    border-radius: 8px;
+    margin-top: 13px;
+}
+.test-questions-section .test-questions-container .questions .question-card .form-group{
+    width: 300px;
+}
+
+.test-questions-section .test-questions-container .questions .question-card .form-group .question{
+    width: 80%;
+    padding-top: 10px;
+    font-size: 1rem;
+    font-family: var(--roboto-font);
+    text-transform: capitalize;
+    color: #202124;
+   
+}
+.test-questions-section .test-questions-container .questions .question-card .form-group .option-label{
+    margin-top: 18px;
+    display: flex;
+    align-items: center;
+}
+.test-questions-section .test-questions-container .questions .question-card .form-group .option-label input{
+    width: 18px;
+    height: 18px;
+    color: var(--comman-color);
+    cursor: pointer;
+}
+.test-questions-section .test-questions-container .questions .question-card .form-group .option-label  .label{
+    font-size: 0.9;
+    text-transform: capitalize;
+    font-family: var(--roboto-font);
+    color: #202124;
+    margin-left: 13px;
+}

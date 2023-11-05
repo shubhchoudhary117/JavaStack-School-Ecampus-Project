@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Titan+One&display=swap');
+
+::ng-deep :root {
+    --comman-color: #3D5EE1;
+    --comman-white-color: #fff;
+    --profile-menu-color: #f7f7fa;
+    --comman-name-color: #1d1d1d;
+    --profile-name-font: 'Roboto', sans-serif;
+    --menu-icon-color: #858ba8;
+    --comman-font: 'Poppins', sans-serif;
+    --student-name: #febd2f;
+    --fees-form-heading: 'Titan One', cursive;
+    --field-color: #f5f5f5;
+    --validatin-error-error: #E91100;
+    --teacher-name-font: 'Roboto', sans-serif;
+    --news-title-color: #657686;
+    --news-text-color: #657686;
+    --field-label:#657686;
+}
+
+.do-email-section {
+    width: 98%;
+    box-sizing: border-box;
+}
+
+.do-email-section .email-container {
+    width: 99%;
+    margin: auto;
+    box-sizing: border-box;
+    margin-top: 5px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    background-color: #fff;
+}
+
+.do-email-section .email-container .email-heading {
+    font-size: 1.4rem;
+    text-transform: capitalize;
+    text-align: center;
+    color: var(--comman-color);
+    font-family: var(--profile-name-font);
+}
+
+.do-email-section .email-container .email-form {
+    width: 80%;
+    margin: auto;
+    margin-top: 25px;
+
+}
+
+.do-email-section .email-container .email-form .form-field {
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: 20px;
+  
+}
+.do-email-section .email-container .email-form .form-text-area{
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: 20px;
+  
+}
+.do-email-section .email-container .email-form .form-field .label {
+    margin-bottom: 7px;
+    font-size: 0.9rem;
+    text-transform: capitalize;
+    font-family: var(--comman-font);
+    color: var(--field-label);
+    padding-left: 2px;
+}
+.do-email-section .email-container .email-form .form-text-area .label{
+    margin-bottom: 7px;
+    font-size: 0.9rem;
+    text-transform: capitalize;
+    font-family: var(--comman-font);
+    color: var(--field-label);
+    padding-left: 2px;
+}
+
+.do-email-section .email-container .email-form .form-field input{
+    width: 100%;
+    height: 40px;
+    box-sizing: border-box;
+    padding-left: 12px;
+    font-size: 1rem;
+    border: none;
+    border: 1px solid rgba(0,0,0,0.1);
+    outline: none;
+    border-radius: 3px;
+}
+.do-email-section .email-container .email-form .form-field input::placeholder{
+    font-size: 0.9rem;
+    font-family: var(--comman-font);
+    text-transform: capitalize;
+}
+.do-email-section .email-container .email-form .form-field .validation-error,.form-text-area .validation-error{
+    font-size: 0.8rem;
+    margin: 0px;
+    padding: 0px;
+    color: var(--validatin-error-error);
+}
+.do-email-section .email-container .email-form .form-field select{
+    width: 100%;
+    height: 40px;
+    box-sizing: border-box;
+    padding-left: 12px;
+    font-size: 1rem;
+    border: none;
+    border: 1px solid rgba(0,0,0,0.1);
+    outline: none;
+    border-radius: 3px;
+}
+.do-email-section .email-container .email-form .form-field select option{
+   font-size: 0.9rem;
+   cursor: pointer;
+   text-transform: capitalize;
+}
+.do-email-section .email-container .email-form .form-field input:focus{
+    border: 1px solid var(--comman-color);
+}
+
+.do-email-section .email-container .email-form .form-text-area textarea{
+    width: 100%;
+    height: 110px;
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+    padding: 12px;
+    border:none;
+    font-size: 1rem;
+    border: 1px solid rgba(0,0,0,0.1);
+}
+.do-email-section .email-container .email-form .form-text-area textarea::placeholder{
+    font-size: 0.9rem;
+    font-family: var(--comman-font);
+    text-transform: capitalize;
+}
+.do-email-section .email-container .email-form .form-text-area textarea:focus{
+    border: 1px solid var(--comman-color);
+}
+.do-email-section .email-container .email-form  .form-btn{
+    width: 120px;
+    height: 45px;
+    box-sizing: border-box;
+ 
+ 
+}
+.do-email-section .email-container .email-form  .form-btn button{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    margin-top: 15px;
+    border: 1px solid var(--comman-color);
+    font-size: 0.9rem;
+    font-family: var(--comman-font);
+    text-transform: capitalize;
+    border-radius: 3px;
+    background-color: #fff;
+    color: var(--comman-color);
+    cursor: pointer;
+    
+}
+.do-email-section .email-container .email-form  .form-btn button .btn-icon{
+    margin-right: 5px;
+}
+.do-email-section .email-container .email-form  .form-btn button:hover{
+    transition: ease all 0.8s;
+    color: #fff;
+    background-color: var(--comman-color);
+}
+

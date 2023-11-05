@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Titan+One&display=swap');
+::ng-deep :root{
+    --comman-color:#3D5EE1;
+    --comman-white-color:#fff;
+    --profile-menu-color:#f7f7fa;
+    --comman-name-color:#1d1d1d;
+    --profile-name-font:'Roboto', sans-serif;
+    --menu-icon-color:#858ba8;
+    --comman-font:'Poppins', sans-serif;
+    --student-name:#febd2f;
+    --fees-form-heading:'Titan One', cursive;
+    --field-color:#f5f5f5;
+    --validatin-error-error:#E91100;
+}
+
+::ng-deep *{
+    margin: 0px;
+    padding: 0px;
+}
+
+.bus-route-section{
+    width: 100%;
+    box-sizing: border-box;
+}
+.bus-route-section header{
+    width: 95%;
+    margin: auto;
+    background-color: #fff;
+    padding: 10px 10px 10px 10px;
+    margin-top: 10px;
+    box-sizing: border-box;
+}
+.bus-route-section header .heading{
+    font-size: 1.4rem;
+    font-family: var(--profile-name-font);
+    text-transform: capitalize;
+    color: #757575;
+}
+.bus-route-section .bus-routes-wrapper{
+    width: 95%;
+    box-sizing: border-box;
+    margin: auto;
+    background-color: #fff;
+    padding: 10px 10px 0px 10px;
+    margin-top: 15px;
+}
+.bus-route-section .bus-routes-wrapper  .bus-route-container{
+    width: 100%;
+    display: flex;
+}
+.bus-route-section .bus-routes-wrapper  .bus-route-container .bus-route{
+    width: 45%;
+    height: 100%;
+    display: flex;
+    padding: 20px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+.bus-route-section .bus-routes-wrapper  .bus-route-container  .active-bus-route{
+    border-bottom: 4px solid var(--comman-color);
+}
+.bus-route-section .bus-routes-wrapper  .bus-route-container .bus-route .bus-details{
+    margin-left: 20px;
+}
+.bus-route-section .bus-routes-wrapper  .bus-route-container .bus-route .bus-details .serving-location{
+    font-size: 18px;
+    text-transform: capitalize;
+    font-family: var(--profile-name-font);
+    font-weight: 500;
+    color: #657686;
+}
+.bus-route-section .bus-routes-wrapper  .bus-route-container .bus-route .bus-details .collage-name{
+    font-size: 0.9rem;
+    padding-top: 5px;
+    text-transform: capitalize;
+    color: #657686;
+    font-family: var(--profile-name-font);
+}
+.bus-route-section .bus-routes-wrapper  .bus-route-container .bus-route .bus-details .bus-number{
+    font-size: 1.1rem;
+    text-transform: capitalize;
+    padding-top: 6px;
+    font-weight: 500;
+    color: #657686;
+}
+.bus-route-section .bus-routes-wrapper  .bus-route-container .bus-route .bus-details .bus-time{
+    font-size: 0.9rem;
+    text-transform: capitalize;
+    color: #657686;
+    padding-top: 6px;
+}

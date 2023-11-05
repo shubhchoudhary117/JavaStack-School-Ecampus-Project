@@ -1,0 +1,44 @@
+
+
+
+<section class="signeup-section">
+    <div class="signeup-wrapper">
+        <div class="heading">Signeup here</div>
+        <div class="signeup-box">
+          <form (ngSubmit)="doSignup()">
+            <div class="form-field">
+              <div class="label">fullname</div>
+              <input type="text" name="name" [(ngModel)]="Signer.name">
+              <p class="hint" *ngIf="nameIsEmpty">please enter your name</p>
+              <p class="hint" *ngIf="allFieldsEmpty">please enter your name</p>
+            </div>
+            <div class="form-field">
+              <div class="label">email</div>
+              <input type="text" name="email" [(ngModel)]="Signer.email">
+              <p class="hint" *ngIf="emailIsEmpty">please enter email</p>
+              <p class="hint" *ngIf="allFieldsEmpty">please enter email</p>
+              <p class="hint" *ngIf="emailIsAlreadyExist">email is already exist</p>
+            </div>
+            <div class="form-field">
+              <div class="label">password</div>
+              <input type="text" name="password" [(ngModel)]="Signer.password">
+              <p class="hint" *ngIf="passwordIsEmpty">please enter password</p>
+              <p class="hint" *ngIf="allFieldsEmpty">please enter password</p>
+            </div>
+            <div class="form-field">
+              <div class="label">conform-password</div>
+              <input type="text" name="cpassword" [(ngModel)]="Signer.cpassword">
+              <p class="hint" *ngIf="cpasswordIsEmpty">please conform password</p>
+              <p class="hint" *ngIf="allFieldsEmpty">please conform password</p>
+            </div>
+            <div class="form-btn">
+              <button>signup</button>
+            </div>
+            <div class="message">
+              <p>if you already have an account ? <a href="/login">login</a></p>
+            </div>
+          </form>
+        </div>
+
+    </div>
+</section>

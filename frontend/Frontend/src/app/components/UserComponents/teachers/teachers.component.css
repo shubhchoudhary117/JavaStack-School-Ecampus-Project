@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+::ng-deep :root{
+    --comman-color:#3D5EE1;
+    --comman-white-color:#fff;
+    --profile-menu-color:#f7f7fa;
+    --comman-name-color:#1d1d1d;
+    --profile-name-font:'Roboto', sans-serif;
+    --menu-icon-color:#858ba8;
+    --comman-font:'Poppins', sans-serif;
+    --student-name:#febd2f;
+    --black-color:#333333;
+    --heading-font:  'Roboto', sans-serif;
+}
+
+.teachers-section{
+    width: 100%;
+}
+.teachers-section header{
+    width: 90%;
+    margin: auto;
+    margin-top: 10px;
+}
+.teachers-section header nav{
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.teachers-section header nav .heading{
+    font-size: 1.4rem;
+    text-transform: capitalize;
+    color: var(--black-color);
+    font-family: var(--heading-font);
+}
+.teachers-section header nav .link-path{
+    font-size: 1.3rem;
+    text-transform: capitalize;
+    color: var(--black-color);
+    font-family: var(--heading-font);
+}
+.teachers-section header .filters{
+    width: 90%;
+    display: flex;
+    align-items: center;
+   
+    margin-top:20px;
+}
+.teachers-section header .filters .search-by-name .form-field{
+    width: 240px;
+    height: 40px;
+  
+}
+.teachers-section header .filters .search-by-name .form-field input{
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 5px;
+    background-color: #fff;
+    outline: none;
+    padding-left: 12px;
+}
+.teachers-section header .filters .search-by-name .form-field input:focus{
+    border: 1px solid var(--comman-color);
+}
+
+.teachers-section header .filters .search-by-branch .form-field {
+    width: 240px;
+    height: 40px;
+}
+
+.teachers-section header .filters .search-by-branch .form-field input{
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 5px;
+    background-color: #fff;
+    outline: none;
+    padding-left: 12px;
+}
+.teachers-section header .filters .search-by-branch .form-field input::placeholder,
+.teachers-section header .filters .search-by-name .form-field input::placeholder{
+    color: #333;
+}
+.teachers-section header .filters .search-by-branch .form-field input:focus{
+    border: 1px solid var(--comman-color);
+}
+
+.teachers-section header .filters .search-btn button{
+    width: 120px;
+    height: 38px;
+    border-radius: 4px;
+    text-transform: uppercase;
+    color: var(--comman-white-color);
+    border: none;
+    background-color: var(--comman-color);
+    cursor: pointer;
+    font-weight: 500;
+    margin-left: 25px;
+
+}
+.teachers-section header .filters .search-btn button:hover{
+   background-color: #18aefa;
+}
+
+.teachers-section .teachers-template{
+    width: 100%;
+    margin-top: 20px;
+    border-radius: 10px;
+    background-color: #fff;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.teachers-section .teachers-template .teachers-container{
+    width: 100%;
+    margin: auto;
+  
+
+}
+.teachers-section .teachers-template .teachers-container .heading{
+    margin-left: 16px;
+    font-size: 1.3rem;
+    text-transform: capitalize;
+}
+.teachers-section .teachers-template .teachers-container .teachers{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.teachers-section .teachers-template .teachers-container .teachers .teacher{
+    width:200px;
+    height: 235px;
+    background-color: var(--comman-white-color);
+    border-radius: 0.25rem;
+    border: 1px solid rgba(0,0,0,.125);
+    padding-top: 25px;
+    margin: 15px;
+}
+.teachers-section .teachers-template .teachers-container .teachers .teacher .image{
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    background-clip: border-box;
+    margin: auto;
+
+}
+.teachers-section .teachers-template .teachers-container .teachers .teacher .image img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: fill;
+}
+.teachers-section .teachers-template .teachers-container .teachers .teacher  .teacher-detail{
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
+}
+.teachers-section .teachers-template .teachers-container .teachers .teacher  .teacher-detail 
+.teacher-name{
+    font-size: 0.9rem;
+    color: var(--comman-color);
+    font-family: var(--comman-font);
+    font-weight: 600;
+    text-transform: capitalize;
+    cursor: pointer;
+}
+.teachers-section .teachers-template .teachers-container .teachers .teacher  .teacher-detail
+ .teacher-role{
+    text-transform: capitalize;
+    font-size: 0.8rem;
+    font-family: var(--comman-font);
+    font-weight: 600;
+    padding-top: 3px;
+}

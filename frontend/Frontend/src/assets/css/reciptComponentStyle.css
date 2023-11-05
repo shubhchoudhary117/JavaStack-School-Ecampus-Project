@@ -1,0 +1,211 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins&display=swap');
+
+::ng-deep :root{
+    --roboto-font:'Roboto', sans-serif;
+    --popins-font:'Poppins', sans-serif;
+
+}
+
+.recipt-page{
+    width: 80%;
+    height: 100vh;
+    padding-top: 20px;
+   
+    margin: auto;
+    margin-top: 0px !important;
+    border: 1px solid rgba(0,0,0,0.9);
+    margin-top: 5px;
+
+}
+
+.recipt-page .recipt-header{
+    width: 100%;
+    text-align: center;
+}
+.recipt-page .recipt-header .school-name{
+    font-size: 21rem;
+    font-weight: 600;
+    color: #000;
+    text-transform: capitalize;
+    font-family: var(--popins-font);
+    color: red;
+}
+
+.recipt-page .recipt-header .school-location{
+    margin-top: 20px;
+    font-size: 0.8rem;
+    font-family: var(--roboto-font);
+    text-transform: capitalize;
+}
+.recipt-page .recipt-details-card{
+    width: 95%;
+    margin: auto;
+    margin-top: 10px;
+}
+.recipt-page .recipt-details-card .heading{
+    text-align: center;
+    font-size: 0.9rem;
+    font-family: var(--roboto-font);
+    font-weight: bolder;
+    text-transform: capitalize;
+    padding-top: 5px;
+}
+.recipt-page .recipt-details-card .details-container{
+    width: 100%;
+    border-top: 1px solid #000;
+    display: flex;
+    justify-content: space-between;
+}
+.recipt-page .recipt-details-card .details-container .left,.mid,.right{
+    margin-top: 13px;
+}
+.recipt-page .recipt-details-card .details-container .left p,.mid p,.right p{
+    font-family:var(--popins-font) ;
+    font-size: 0.7rem;
+    padding-top: 0px;
+    line-height: 1rem;
+    color: #000;
+}
+.recipt-page .school-fees-structure{
+    width: 90%;
+    margin: auto;
+}
+.recipt-page .school-fees-structure .header{
+    width: 100%;
+    
+    padding: 5px;
+    border-top: 1px solid #333;
+    border-bottom: 1px solid #333;
+    align-items: center;
+    margin: auto;
+}
+.recipt-page .school-fees-structure .header .headings{
+    width: 85%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+}
+.recipt-page .school-fees-structure .header strong{
+    font-weight: bolder;
+    text-transform: capitalize;
+    font-family: var(--roboto-font);
+   
+}
+
+.recipt-page .school-fees-structure  .structure-lable-values{
+    width: 85%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+}
+.recipt-page .school-fees-structure  .structure-lable-values .labels .label{
+    margin-top: 5px;
+    font-size: 0.8rem;
+    font-family: var(--popins-font);
+    font-weight: bold;
+}
+.recipt-page .school-fees-structure  .structure-lable-values  .values .value{
+    margin-top: 5px;
+    font-size: 0.8rem;
+    font-family: var(--popins-font);
+    font-weight: bolder;
+}
+
+.recipt-page .recipt-fees-details{
+    width: 90%;
+    margin: auto;
+    border-top: 1px solid #000;
+    border-bottom: 1px solid #000;
+    margin-top: 50px;
+}
+.recipt-page .recipt-fees-details .line{
+    width: 90%;
+    height: 1px;
+    background-color: #000;
+    margin: auto;
+    margin-top: 20px;
+}
+.recipt-page .recipt-fees-details .dot-line{
+    width: 70%;
+    border-bottom: 2px dotted #000;
+   margin-left: 30px;
+    margin-top: 20px;
+} 
+.recipt-page .recipt-fees-details .recipt-payment-details{
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+}
+.recipt-page .recipt-fees-details .recipt-payment-details .bank-details{
+    margin-top: 5px;
+}
+.recipt-page .recipt-fees-details .recipt-payment-details .bank-details .check-no{
+    margin-bottom: -4px;
+}
+.recipt-page .recipt-fees-details .recipt-payment-details .bank-details .rupe-in-word{
+    font-size: 0.8rem;
+    margin-top: 6px;
+    font-weight: 600;
+}
+.recipt-page .recipt-fees-details .recipt-payment-details .bank-details .upi-id{
+    font-size: 0.8rem;
+    font-family: var(--roboto-font);
+}
+.recipt-page .recipt-fees-details .recipt-payment-details .total-recive-fees{
+    width:300px;
+    padding: 5px;
+    border-bottom: 2px solid black;
+    font-size: 0.8rem;
+    font-family: var(--popins-font);
+    font-weight: bolder;
+    text-transform: capitalize;
+}
+.recipt-page .recipt-fees-details .recipt-payment-details .total-recive-fees span{
+    padding-left: 70px;
+}
+.recipt-page .recipt-fees-details .recipt-payment-details .recived-by-check{
+    padding-top: 5px;
+    font-family: var(--popins-font);
+    text-transform: capitalize;
+    font-size: 0.7rem;
+}
+
+.recipt-page .recipt-fees-details .recipt-payment-details .recived-by-check span{
+    padding-left: 70px;
+    font-weight: bolder;
+    font-size: 0.8rem;
+    
+} 
+.recipt-page .recipt-fees-details .recipt-payment-details .due-balance{
+    width:300px;
+    padding: 5px;
+    border-top: 2px solid #000;
+    font-size: 0.8rem;
+    font-family: var(--popins-font);
+    font-weight: bolder;
+    text-transform: capitalize;
+    margin-top: 20px;
+}
+.recipt-page .recipt-fees-details .recipt-payment-details .due-balance span{
+    padding-left: 80px;
+}
+
+
+.recipt-page  .recipt-footer{
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: auto;
+    margin-top: 40px;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    font-family: var(--popins-font);
+    font-weight: 700;
+    color: black;
+    border-bottom: 1px solid #000;
+    padding-bottom: 10px;
+}

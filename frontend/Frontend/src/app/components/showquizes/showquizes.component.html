@@ -1,0 +1,28 @@
+<section class="quizes-section">
+    <!-- --------------- card ----------------- -->
+    <mat-card class="mat-card" *ngFor="let q of QuizeData" >
+        <mat-card-header class="card-header">
+            <div mat-card-avatar class="header-image"></div>
+          <mat-card-title class="quize-title">{{q.title}}</mat-card-title>
+          <mat-card-subtitle class="quize-description">{{q.title}} </mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-actions class="card-buttons">
+          <button mat-flat-button class="flat-btn" [routerLink]="['/admin/dashboard/show-questions',q.qid]">questions</button>
+          <button mat-stroked-button  class="stroked-btn">max marks {{q.maxmarks}}</button>
+          <button mat-stroked-button  class="stroked-btn">questions {{q.numberofquestions}}</button>
+          <button mat-flat-button class="flat-btn">update</button>
+          <button mat-flat-button class="flat-btn">attemps</button>
+          <div class="active-btn">
+            <div class="check-btn"> <mat-slide-toggle    color="primary" [checked]="q.active"   class="slide-toggle"></mat-slide-toggle></div>
+            <p class="active-heading">publish</p>
+          </div>
+          <button class="delete-btn" (click)="doDeleteQuize(q.qid)"><mat-icon>delete</mat-icon></button>
+          
+        </mat-card-actions>
+      </mat-card>
+    <!-- --------------- card ----------------- -->
+   
+      <div class="add-quize-btn">
+        <button mat-flat-button class="flat-btn" [routerLink]="['/admin/dashboard/add-quize']">add quize</button>
+      </div>
+    </section>

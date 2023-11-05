@@ -1,0 +1,148 @@
+
+<div class="add-student-section">
+    <div class="add-student-container">
+        <div class="heading">add new student</div>
+        <form (ngSubmit)="doAddStudent()" enctype="multipart/form-data">
+        <div class="image-uploading-section">
+            <div class="image-upload-box">
+                <div class="image">
+                    <div class="user-logo"><img src="../../../../assets/photos/usericon.png.png" alt=""></div>
+                    <div class="upload-icon"><mat-icon class="icon"><label for="upload">add_a_photo</label></mat-icon></div>
+                    <input type="file" (change)="getFile($event)" name="file" id="upload">
+                </div>
+            </div>
+        </div>
+        <div class="student-form">
+            <div class="form-group">
+                <div class="label">student name</div>
+                <input [(ngModel)]="studentData.studentname" type="text" name="fullname">
+                <p class="validation-error" *ngIf="formValidation.studentnameFieldIsEmpty">student name is required</p>
+            </div>
+            <div class="form-group">
+                <div class="label">father name</div>
+                <input [(ngModel)]="studentData.fathername" type="text" name="fathername">
+                <p class="validation-error" *ngIf="formValidation.fathernameFieldIsEmpty">father' name is required</p>
+            </div>
+            <div class="form-group">
+                <div class="label">mothers name</div>
+                <input [(ngModel)]="studentData.mothername" type="text" name="mothername">
+                <p class="validation-error" *ngIf="formValidation.mothernameFieldIsEmpty">mother's name is required</p>
+            </div>
+            <div class="form-group">
+                <div class="label">Enrollment</div>
+                <input [(ngModel)]="studentData.enrollment" type="text" name="enrollment">
+                <p class="validation-error" *ngIf="formValidation.enrollmentFieldIsEmpty">enrollment number is required</p>
+            </div>
+            <div class="form-group">
+                <div class="label">mobile number</div>
+                <input [(ngModel)]="studentData.mobile" type="text" name="mobile">
+                <p class="validation-error" *ngIf="formValidation.mobileFieldIsEmpty" >mobile number is required</p>
+            </div>
+            <div class="form-group">
+                <div class="label">village</div>
+                <input [(ngModel)]="studentData.village" type="text" name="village">
+                <p class="validation-error"  *ngIf="formValidation.villageFieldIsEmpty">village is required</p>
+            </div>
+          
+            <div class="form-group">
+                <div class="label">addmission year</div>
+                <input [(ngModel)]="studentData.addmissionyear" type="date" name="addmissionyear">
+                <p class="validation-error"  *ngIf="formValidation.addmissionyearFieldIsEmpty">addmission year is required</p>
+            </div>
+            <div class="form-group">
+                <div class="label">birth date</div>
+                <input [(ngModel)]="studentData.birthdate" type="date" name="birthdate">
+                <p class="validation-error"  *ngIf="formValidation.birthdateFieldIsEmpty">birthdate is required</p>
+            </div>
+            
+            <div class="form-group">
+                <div class="label">class</div>
+                <select style="text-transform: none;" name="class" [(ngModel)]="studentData.classname" id="type">
+                    <option selected id="selected">choose student class</option>
+                    <option value="6th">6th</option>
+                    <option value="7th">7th</option>
+                    <option value="8th">8th</option>
+                    <option value="9th">8th</option>
+                    <option value="10th">10th</option>
+                    <option value="11th">11th</option>
+                    <option value="12th">12th</option>
+                </select>
+                <p class="validation-error"  *ngIf="formValidation.classnameFieldIsEmpty">plase choose student class</p>
+            </div>
+            <div class="form-group">
+                <div class="label">regular/private</div>
+                <select [(ngModel)]="studentData.schooltype" name="schooltype" id="type">
+                    <option selected id="selected">choose school type</option>
+                    <option value="regular">regular</option>
+                    <option value="private">private</option>
+                </select>
+                <p class="validation-error"  *ngIf="formValidation.schooltypeFieldIsEmpty">please choose school type</p>
+            </div>
+            <div class="form-group">
+                <div class="label">category</div>
+                <select name="category" [(ngModel)]="studentData.category" id="type" >
+                    <option selected id="selected">choose category</option>
+                    <option value="obc">obc</option>
+                    <option value="general">general</option>
+                    <option value="st">st</option>
+                    <option value="sc">sc</option>
+                </select>
+                <p class="validation-error"  *ngIf="formValidation.categoryFieldIsEmpty"> please choose category</p>
+            </div>
+            <div class="form-group">
+                <div class="label">midium</div>
+                <select [(ngModel)]="studentData.midium" name="midium" id="type">
+                    <option selected id="selected">choose student midium</option>
+                    <option value="hinde">hindi</option>
+                    <option value="english">english</option>
+                </select>
+                <p class="validation-error"  *ngIf="formValidation.midiumFieldIsEmpty">please choose midium</p>
+            </div>
+            <div class="form-group">
+                <div class="label">gender</div>
+                <select [(ngModel)]="studentData.gender" name="gender" id="gender">
+                    <option selected id="selected">choose gender</option>
+                    <option value="male">male</option>
+                    <option value="female">female</option>
+                </select>
+                <p class="validation-error"  *ngIf="formValidation.midiumFieldIsEmpty">please choose gender</p>
+            </div>
+            <div class="form-group">
+                <div class="label">email address</div>
+                <input [(ngModel)]="studentData.email" type="email" name="email">
+                <p class="validation-error"  *ngIf="formValidation.emailFieldIsEmpty">email is required</p>
+              </div>
+              <div class="form-group">
+                <div class="label">address</div>
+                <input [(ngModel)]="studentData.address" type="text" name="address">
+                <p class="validation-error"  *ngIf="formValidation.addressFieldIsEmpty">address is required</p>
+              </div>
+
+              <div class="form-group fees-model-selectbar">
+                <div class="label">select student category</div>
+                <select name="scid" [(ngModel)]="studentData.studentCategory.scid" id="type">
+                    <option selected id="selected">choose student class</option>
+                    <option [value]="class.scid" *ngFor="let class of availableClasses">{{class.className}}</option>
+                </select>
+                <p class="validation-error"  *ngIf="formValidation.classnameFieldIsEmpty">plase choose student class</p>
+            </div>
+            <!-- <div class="address-email-combo">
+              <div class="form-group">
+                <div class="label">email address</div>
+                <input [(ngModel)]="studentData.email" type="email" name="email">
+                <p class="validation-error"  *ngIf="formValidation.emailFieldIsEmpty">email is required</p>
+              </div>
+              <div class="form-group">
+                <div class="label">address</div>
+                <input [(ngModel)]="studentData.address" type="text" name="address">
+                <p class="validation-error"  *ngIf="formValidation.addressFieldIsEmpty">address is required</p>
+              </div>
+            </div> -->
+        </div>
+        <div class="form-btn">
+            <button>add student</button>
+        </div>
+    </form>
+    {{studentData|json}}
+    </div>
+</div>

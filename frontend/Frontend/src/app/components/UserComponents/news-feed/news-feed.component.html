@@ -1,0 +1,55 @@
+
+
+<div class="news-feed-section">
+    <div class="news-templates" *ngIf="!activeLoader">
+        <!-- template -------------------------------------------------- -->
+        <div class="news-template" *ngFor="let news of allNews">
+            <div class="header">
+                <div class="image-and-details">
+                    <div class="image"><img src="../../../../assets/photos/user.webp" alt="image is loading"></div>
+                    <div class="details">
+                        <div class="teacher-name">{{news.teacher.teacherName}}</div>
+                        <div class="date-time">{{news.newsdate}}</div>
+                    </div>
+                </div>
+            </div>
+            <div class="posted-news-content" [innerHtml]="news.newscontent|safeHtml">
+            
+            </div>
+            
+            <div class="html-con"></div>
+            <!-- <div class="news-title">
+                <div class="title">CHAMELI DEVI GROUP OF INSTITUIONS DEPARTMENT OF MANAGEMENT
+                    ADVANCED EXCEL CERTIFICATION EXAM
+                </div>
+            </div>
+            <div class="news-text">
+                <div class="text"> 
+
+                    This is to inform all the students that the Advance Excel Certification Exam is scheduled
+                     on Monday 13th March 2023. The exam will be conducted in online mode and 
+                    the duration of the exam will be 1 hour. No responses will be accepted after the due time.
+                </div>
+            </div> -->
+            <!-- <div class="news-footer">
+                <div class="document"><mat-icon class="icon">file_copy</mat-icon>invalid_slide.jpeg</div>
+            </div> -->
+        </div>
+         <!-- template -------------------------------------------------- -->
+          
+        <div class="not-AnyNews-template" *ngIf="noAnyNews">
+            <div class="not-news-heading">No any news is declare </div>
+            <div class="news-image">
+                <img src="../../../../assets/photos/emptyNews.svg.svg" alt="image is loading please wait">
+            </div>
+        </div>
+        
+    </div>
+</div>
+
+<!-- <div class="loader-layer" *ngIf="activeLoader"> -->
+    <div class="loader"  *ngIf="activeLoader">
+        <ngx-spinner class="spinner"    [name]="spinnerName"
+         [type]="spinnerType" color="#3D5EE1" size="medium"></ngx-spinner>
+    </div>
+<!-- </div> -->

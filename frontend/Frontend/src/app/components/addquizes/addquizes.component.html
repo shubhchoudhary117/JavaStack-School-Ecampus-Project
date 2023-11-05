@@ -1,0 +1,57 @@
+<section class="add-quizes-section">
+    <mat-card class="mat-card">
+        <div class="quizes-container">
+            <h3 class="heading">add quizes</h3>
+            <div class="fields">
+                <form (ngSubmit)="addQuize()">
+                <div class="form-field">
+                    <mat-form-field appearance="outline" class="mat-form-field">
+                        <mat-label>title</mat-label>
+                        <input name="title" [(ngModel)]="quizeData.title" matInput>
+                        <mat-hint class="validation-error" *ngIf="titleFieldIsEmpty">title is required</mat-hint>
+                        <mat-hint class="validation-error" *ngIf="allFieldsIsEmpty">title is required</mat-hint>
+                    </mat-form-field>
+                </div>
+                <div class="form-field">
+                    <mat-form-field appearance="outline" class="mat-form-field">
+                        <mat-label>description</mat-label>
+                        <textarea name="description" [(ngModel)]="quizeData.description" matInput></textarea>
+                        <mat-hint class="validation-error" *ngIf="descriptionFieldIsEmpty">description is required</mat-hint>
+                        <mat-hint class="validation-error" *ngIf="allFieldsIsEmpty">description is required</mat-hint>
+                    </mat-form-field>
+                </div>
+                <div class="combo-form-field">
+                    <mat-form-field appearance="outline" class="mat-form-field">
+                        <mat-label>max marks</mat-label>
+                        <input name="maxmarks" [(ngModel)]="quizeData.maxmarks" type="number" matInput>
+                        <mat-hint class="validation-error" *ngIf="maxmarksFieldIsEmpty">max marks is required</mat-hint>
+                        <mat-hint class="validation-error" *ngIf="allFieldsIsEmpty">max marks is required</mat-hint>
+                    </mat-form-field>
+                    <mat-form-field appearance="outline" class="mat-form-field">
+                        <mat-label>number of questios</mat-label>
+                        <input name="numberofquestions" [(ngModel)]="quizeData.numberofquestions" type="number" matInput>
+                        <mat-hint class="validation-error" *ngIf="numberofquestionsFieldIsEmpty">number of questions is required</mat-hint>
+                        <mat-hint class="validation-error" *ngIf="allFieldsIsEmpty">number of questions is required</mat-hint>
+                    </mat-form-field>
+                </div>
+                <div class="check-btn"> <mat-slide-toggle name="status" [(ngModel)]="quizeData.active" color="primary" [checkded]="false" class="slide-toggle">publish status </mat-slide-toggle></div>
+                <div class="form-field select" >
+                <mat-form-field appearance="outline" class="mat-form-field">
+                    <mat-label>Choose quize category</mat-label>
+                    <mat-select name="category" [(ngModel)]="quizeData.category">
+                      <mat-option  *ngFor="let c of allCategories" [value]="c.cid">{{c.title}}</mat-option>
+                    </mat-select>
+                    <mat-hint class="validation-error" *ngIf="optionsFieldIsEmpty">please choose one option</mat-hint>
+                    <mat-hint class="validation-error" *ngIf="allFieldsIsEmpty">please choose one option</mat-hint>
+                  </mat-form-field>
+                </div>
+                {{quizeData|json}}
+            
+                <div class="form-btn">
+                    <button mat-raised-button>add</button>
+                </div>
+            </form>
+            </div>
+        </div>
+    </mat-card>
+</section>

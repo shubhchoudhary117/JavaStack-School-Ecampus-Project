@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap');
+*{
+    margin: 0px;
+    padding: 0px;
+}
+::ng-deep body{
+    width: 100vw;
+    height: 100vh;
+    background-color: #f5f5f5;
+}
+::ng-deep :root{
+    --nav-color:#0D9fbf;
+    --heading-color:#2d2824;
+    --white-color:#ffffff;
+    --comman-font:'Poppins', sans-serif;
+    --comman-btn:#0D9fbf;
+    --comman-color:#0D9fbf;
+    --label-color:#52525a;
+    --field-error-color:#E91100;
+    --mst-color:rgb(255 0 73);
+}
+.quizes-section{
+    width: 97%;
+    margin-left: 12px;
+    margin-top: 10px;
+}
+.mat-card{
+    padding: 10px;
+    margin-top: 10px;
+}
+.mat-card .header-image{
+   
+    background-image: url("../../../assets/photos/test.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.mat-card .card-header .quize-title{
+    text-transform: capitalize;
+}
+.mat-card .card-buttons .flat-btn{
+    text-transform: capitalize;
+    background-color: var(--comman-btn);
+    margin-right: 10px;
+    color: var(--white-color);
+}
+.mat-card .card-buttons .stroked-btn{
+    color: var(--comman-color);
+    margin-right: 10px;
+}
+.quizes-section  .add-quize-btn{
+    width: 130px;
+    height: 40px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+.quizes-section .add-quize-btn button{
+    text-transform: capitalize;
+    background-color: var(--comman-btn);
+    margin-right: 10px;
+    color: var(--white-color);
+}
+.quizes-section  .mat-card .card-buttons  .active-btn{
+    text-align: center;
+    margin-top: 15px;
+    margin-left: 20px;
+}
+
+.quizes-section  .mat-card .card-buttons .active-btn .active-heading{
+    font-size: 0.8rem;
+    padding-top: 3px;
+    text-transform: capitalize;
+    color: var(--heading-color);
+}
+
+
+.quizes-section  .mat-card .card-buttons .delete-btn{
+    border: none;
+    background-color: transparent;
+    border: none;
+    position: absolute;
+    right: 20px;
+    cursor: pointer;
+    color: #d11a2a;
+}
+

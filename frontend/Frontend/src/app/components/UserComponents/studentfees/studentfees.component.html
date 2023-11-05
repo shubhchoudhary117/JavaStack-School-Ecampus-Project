@@ -1,0 +1,149 @@
+<div class="fees-section">
+    <div class="fees-section-container" *ngIf="!activeLoader">
+        <header>
+            <div class="collage-name-and-student-name">
+                <div class="collage-name">shree reva gurjar bal niketan sanawad</div>
+                <div class="student-name">{{student.studentname}}</div>
+            </div>
+            <div class="year">
+                2022-2023
+            </div>
+            <div class="fees-heading">Online Fees Payment</div>
+        </header>
+        <div class="student-details">
+            <div class="student-name"><span class="studentName">name :</span>{{student.studentname}} </div>
+            <div class="father-name"><span class="fatherName">father's name :</span> {{student.fathername}}</div>
+            <div class="scholar-number"><span class="scholarNumber">scholar number :</span>11210306888</div>
+            <div class="class"><span class="className">class :</span>{{student.classname}}</div>
+            <div class="section"><span class="sectionName">section :</span>C</div>
+        </div>
+        <div class="student-id-details">
+            <table>
+                <thead>
+                    <tr>
+                        <th>serial number :</th>
+                        <th>1121030688</th>
+                        <th>enrollment :</th>
+                        <th>{{student.enrollment}}</th>
+                        <th>fees type :</th>
+                        <th>0832CS201156</th>
+                        <th>current year<input type="radio" checked></th>
+                    </tr>
+                </thead>
+            </table>
+        </div>
+        <div class="fees-structure">
+            <div class="label">current</div>
+            <div class="fees-table">
+                <table border="1">
+                    <thead>
+                        <tr>
+                            <th>sr</th>
+                            <th >head name</th>
+                            <th>due ammoutn</th>
+                            <th>rec ammount</th>
+                            <th>from date</th>
+                            <th> to date</th>
+                            <th> due date</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>TUITION FEES (BE)</td>
+                            <td>13550.00</td>
+                            <td>13550.00</td>
+                            <td>01-Jul-2022</td>
+                            <td>01-Jul-2022</td>
+                            <td>01-Jul-2022</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>BUS FEES</td>
+                            <td>6000</td>
+                            <td>13550.00</td>
+                            <td>01-Jul-2022</td>
+                            <td>01-Jul-2022</td>
+                            <td>01-Jul-2022</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>TUITION FEES (BE)</td>
+                            <td>13550.00</td>
+                            <td>13550.00</td>
+                            <td>01-Jul-2022</td>
+                            <td>01-Jul-2022</td>
+                            <td>01-Jul-2022</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>bus fees</td>
+                            <td>13550.00</td>
+                            <td>13550.00</td>
+                            <td>01-Jul-2022</td>
+                            <td>01-Jul-2022</td>
+                            <td>01-Jul-2022</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <!-- end of fees structure table ------------------------------------------------------ -->
+
+        <section class="pay-fees-section">
+
+            <div class="fees-pay-and-fees-instruction">
+                <form (ngSubmit)="doSubmitPayment()">
+                <div class="payment-mode-heading">ceived Amount Details :- Remarks :- <button type="button">online payment</button></div>
+                <div class="total-payment-pay-heading">
+                    <div class="title">by bank</div>
+                    <div class="total-ammount"><input name="payment" type="number" [(ngModel)]="paymentPayload.ammount" [value]="student.feesDetails.duefees"></div>
+                </div>
+                <div class="pay-buttons">
+                    <div class="pay-payment-btn"><button type="submit" >proceed to  payment</button></div>
+                    <div class="exit-btn"><button>exit</button></div>
+                </div>
+            </form>
+                <div class="note">
+                    <div class="heading">note:-</div>
+                    <div class="notes">
+                        <ol>
+                            <li> If you are paying through Debit/Credit Card, the transaction will be reflected in your ERP Login after 1 working day.</li>
+                            <li> If you are paying through Net Banking, the transaction will be reflected in your ERP Login afte</li>
+                            <li>2 working days.</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+            <div class="total-fees-section">
+                <div class="fees-details">
+                    <div class="detail">
+                        <div class="fees-heading">total ammount</div>
+                        <button>{{student.studentCategory.totalFees}}</button>
+                    </div>
+                    <div class="detail">
+                        <div class="fees-heading">due ammount</div>
+                        <button>{{student.feesDetails.duefees}}</button>
+                    </div>
+                    <div class="detail">
+                        <div class="fees-heading">recived ammount</div>
+                        <button>{{student.feesDetails.paidfees}}</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+    
+    <div class="loader-layer" *ngIf="activeLoader">
+        <div class="loader" >
+            <ngx-spinner class="spinner"    [name]="spinnerName"
+             [type]="spinnerType" color="#3D5EE1" size="medium"></ngx-spinner>
+        </div>
+    </div>
+
+</div>
+
+
+
+

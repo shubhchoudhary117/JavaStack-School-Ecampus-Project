@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Graduate&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Concert+One&family=Noto+Sans+Cherokee&family=Permanent+Marker&display=swap');
+
+::ng-deep * {
+    padding: 0px;
+    margin: 0px;
+}
+
+/* hsl(0deg 0% 96%) */
+::ng-deep :root {
+    --header-heading-color: #312623;
+    --header-text-color: #98908c;
+    --side-bar-color: rgb(245 247 250);
+    --comman-font: 'Poppins', sans-serif;
+    --close-sidebar-btn: #0d9fbf;
+    --white-color: #FFFFFF;
+    --img-border-color: #fff8f8;
+    --user-name-color: #2d2824;
+    --user-role-color: #b5b3b4;
+    --user-font: 'Graduate', cursive;
+    --sidebar-links-icon: #0d9fbf;
+    --sidebar-links-color: #363231;
+    --by-note-btn-color:#3c3c97;
+}
+
+.notes-section {
+    width: 100%;
+    height: 100vh;
+
+
+}
+
+.notes-section .section-container {
+    width: 90%;
+    margin: auto;
+}
+
+.notes-section .section-container header {
+    width: 90%;
+    margin: auto;
+    text-align: center;
+    padding: 10px;
+
+}
+
+.notes-section .section-container header .heading {
+    font-size: 2rem;
+    color: var(--header-heading-color);
+    text-transform: capitalize;
+    padding-top: 10px;
+    padding-right: 30px;
+    font-family: var(--comman-font);
+}
+
+.notes-section .section-container header .header-text {
+    font-size: 0.9rem;
+    color: var(--header-text-color);
+    font-family: var(--comman-font);
+    margin-top: 5px;
+}
+
+.notes-section .section-container .notes-container {
+    width: 80%;
+    margin: auto;
+    margin-top: 30px;
+}
+
+.notes-section .section-container .notes-container .notes {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.notes-section .section-container .notes-container .notes .by-note {
+    width: 200px;
+    height: 270px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    margin: 10px;
+}
+.notes-section .section-container .notes-container .notes .by-note .note-image {
+    width: 100%;
+    height: 150px;
+}
+.notes-section .section-container .notes-container .notes .by-note .note-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+}
+
+.notes-section .section-container .notes-container .notes .by-note .note-content {
+    width: 90%;
+    margin: auto;
+    text-align: center;
+}
+
+.notes-section .section-container .notes-container .notes .by-note .note-content .note-title {
+    padding-top: 10px;
+    font-size: 0.9rem;
+    text-transform: capitalize;
+    font-family: var(--comman-font);
+    color: var(--card-title-color);
+}
+
+.notes-section .section-container .notes-container .notes .by-note .note-content .note-desc {
+    font-size: 0.5rem;
+    font-family: var(--comman-font);
+    padding-top: 4px;
+    text-transform: lowercase;
+}
+
+.notes-section .section-container .notes-container .notes .by-note .note-purches-btn {
+    width: 130px;
+    height: 40px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.notes-section .section-container .notes-container .notes .by-note .note-purches-btn button {
+    width: 80px;
+    height: 28px;
+    background-color:var(--by-note-btn-color);
+    color: var(--white-color);
+    margin-top: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-transform: capitalize;
+    font-family: var(--comman-font);
+    letter-spacing: 1px;
+}

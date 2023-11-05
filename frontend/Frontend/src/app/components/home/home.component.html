@@ -1,0 +1,16 @@
+
+
+<div class="login-box">
+    <form (ngSubmit)="doLogin()"></form>
+    <div class="field">
+        <div class="label">your email</div>
+        <input type="text" name="email" [(ngModel)]="logerData.email">
+    </div>
+    <div class="field">
+        <div class="label">your password</div>
+        <input type="number" name="password" [(ngModel)]="logerData.password">
+    </div>         
+    <div class="field-btn">
+        <button id="login-btn">submit</button>
+    </div>
+</div>

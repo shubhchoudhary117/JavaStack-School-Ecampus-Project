@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap');
+*{
+    margin: 0px;
+    padding: 0px;
+}
+::ng-deep body{
+    width: 100vw;
+    height: 100vh;
+    background-color: #f5f5f5;
+}
+::ng-deep :root{
+    --nav-color:#0D9fbf;
+    --heading-color:#2d2824;
+    --white-color:#ffffff;
+    --comman-font:'Poppins', sans-serif;
+    --comman-btn:#fc8571;
+    --comman-color:#0D9fbf;
+    --field-error-color:#E91100;
+    --icon-color:#5d5d5d;
+    --description-color:#5f5f5f;
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+.mat-card{
+    width: 97%;
+    margin-left: 12px;
+}
+.show-category-section{
+   width: 100%;
+
+   margin-top: 20px;
+   padding: 10px;
+}
+.show-category-section .container{
+    width: 100%;
+    margin: auto;
+}
+.show-category-section .container .heading{
+    font-size: 1rem;
+    text-transform: capitalize;
+    color: var(--heading-color);
+    font-family: var(--comman-font);
+}
+.show-category-section .container .categories{
+    width: 100%;
+    margin-top: 10px;
+}
+.show-category-section .container .categories ul{
+    list-style: none;
+}
+.show-category-section .container .categories ul li .category{
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+   
+}
+.show-category-section .container .categories ul .divider{
+   width: 100%;
+    height: 1px;
+    background-color:rgba(0,0,0,0.1);
+    margin-top: 10px;
+   
+}
+.show-category-section .container .categories ul li .category .icon .icon{
+    width: 23px;
+    height: 23px;
+    color: var(--icon-color);
+}
+.show-category-section .container .categories ul li .category .category-content{
+    margin-left: 15px;
+}
+.show-category-section .container .categories ul li .category .category-content .title{
+    font-size: 0.9rem;
+    font-family: var(--comman-font);
+    font-weight: 550;
+    text-transform: capitalize;
+    color: var(--heading-color);
+}
+.show-category-section .container .categories ul li .category .category-content  .description{
+    font-size: 0.7rem;
+    margin-top: -4px;
+    text-transform: capitalize;
+    color: var(--description-color);
+    padding-left: 3px;
+    font-family: var(--comman-font);
+}
+.show-category-section .container .button{
+    width: 140px;
+    height: 40px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+.show-category-section .container .button button{
+    width: 120px;
+    height: 40px;
+    font-size: 0.8rem;
+    background-color: var(--comman-color);
+    text-transform: capitalize;
+    color: var(--white-color);
+    font-family: var(--comman-font);
+}

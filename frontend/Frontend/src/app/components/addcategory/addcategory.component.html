@@ -1,0 +1,35 @@
+
+
+<section class="add-category-section">
+    <mat-card>
+    <div class="category-container">
+        <h3 class="heading" >add category</h3>
+        <div class="fields">
+        <form (ngSubmit)="addCategory()">
+        <div class="form-field">
+            <mat-form-field appearance="outline" class="mat-form-field">
+                <mat-label class="label">title</mat-label>
+                <input matInput name="title" placeholder="Placeholder" [(ngModel)]="categoryData.title">
+                <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+                <mat-hint class="error-message" *ngIf="allFieldsEmpty">category title  is required</mat-hint>
+                <mat-hint class="error-message" *ngIf="titleFieldEmpty">category title is required</mat-hint>
+            </mat-form-field>
+           
+        </div>
+        <div class="form-field">
+            <mat-form-field appearance="outline" class="mat-form-field">
+                <mat-label class="label">description</mat-label>
+                <textarea matInput name="description" [(ngModel)]="categoryData.description"></textarea>
+                <mat-hint class="error-message" *ngIf="allFieldsEmpty">category description is required</mat-hint>
+                <mat-hint class="error-message" *ngIf="descriptionFieldEmpty">category description is required</mat-hint>
+            </mat-form-field>
+        </div>
+        {{categoryData.description}}
+        <div class="form-btn">
+            <button mat-raised-button >add</button>
+        </div>
+    </form>
+    </div>
+    </div>
+</mat-card>
+</section>

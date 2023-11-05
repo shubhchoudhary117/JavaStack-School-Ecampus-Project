@@ -1,0 +1,67 @@
+<section class="add-question-section">
+    <div class="heading">add to quize</div>
+    <mat-card class="mat-card">
+        <div class="heading">enter the details for new question</div>
+        <div class="container">
+            <div class="fields">
+                <form (ngSubmit)="submitQuestion()">
+                    <div class="form-field">
+                        <mat-form-field appearance="outline" class="mat-form-field">
+                            <mat-label>Input</mat-label>
+                            <textarea name="content" [(ngModel)]="questionData.content" matInput></textarea>
+                            <mat-hint class="validation-error" *ngIf="contentFieldEmpty">question content is required</mat-hint>
+                            <mat-hint class="validation-error" *ngIf="allFieldsEmpty">question content is required</mat-hint>
+                        </mat-form-field>
+                    </div>
+                    <div class="combo-form-field">
+                        <mat-form-field appearance="outline" class="mat-form-field">
+                            <mat-label>option 1</mat-label>
+                            <input name="option1" [(ngModel)]="questionData.option1" matInput>
+                            <mat-hint class="validation-error" *ngIf="option1FieldEmpty">option is required</mat-hint>
+                            <mat-hint class="validation-error" *ngIf="allFieldsEmpty">question content is required</mat-hint>
+                        </mat-form-field>
+                        <mat-form-field appearance="outline" class="mat-form-field">
+                            <mat-label>option 2</mat-label>
+                            <input name="option2" [(ngModel)]="questionData.option2" matInput>
+                            <mat-hint class="validation-error" *ngIf="option2FieldEmpty">option is required</mat-hint>
+                            <mat-hint class="validation-error" *ngIf="allFieldsEmpty">question content is required</mat-hint>
+                        </mat-form-field>
+                    </div>
+                    <div class="combo-form-field">
+                        <mat-form-field appearance="outline" class="mat-form-field">
+                            <mat-label>option 1</mat-label>
+                            <input name="option3" [(ngModel)]="questionData.option3" matInput>
+                            <mat-hint class="validation-error" *ngIf="option3FieldEmpty">option is required</mat-hint>
+                            <mat-hint class="validation-error" *ngIf="allFieldsEmpty">question content is required</mat-hint>
+                        </mat-form-field>
+                        <mat-form-field appearance="outline" class="mat-form-field">
+                            <mat-label>option 2</mat-label>
+                            <input name="option4" [(ngModel)]="questionData.option4" matInput>
+                            <mat-hint class="validation-error" *ngIf="option4FieldEmpty">option is required</mat-hint>
+                            <mat-hint class="validation-error" *ngIf="allFieldsEmpty">question content is required</mat-hint>
+                        </mat-form-field>
+                    </div>
+                    <div class="select-box">
+                        <mat-form-field appearance="outline" class="mat-form-field">
+                            <mat-label>select answer</mat-label>
+                            <mat-select name="answer" [(ngModel)]="questionData.answer">
+                                <mat-option [value]="questionData.option1">{{questionData.option1}}</mat-option>
+                                <mat-option [value]="questionData.option2">{{questionData.option2}}</mat-option>
+                                <mat-option [value]="questionData.option3">{{questionData.option3}}n</mat-option>
+                                <mat-option [value]="questionData.option4">{{questionData.option4}}</mat-option>
+                            </mat-select>
+                            <mat-hint class="validation-error" *ngIf="answerFieldEmpty">option is required</mat-hint>
+                            <mat-hint class="validation-error" *ngIf="allFieldsEmpty">question content is required</mat-hint>
+                        
+                        </mat-form-field>
+                    </div>
+                    <div class="button">
+                        <button class="btn">add</button>
+                    </div>
+
+
+                </form>
+            </div>
+        </div>
+    </mat-card>
+</section>

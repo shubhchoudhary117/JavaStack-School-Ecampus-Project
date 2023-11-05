@@ -1,0 +1,481 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+::ng-deep :root{
+    --comman-color:#3D5EE1;
+    --comman-white-color:#fff;
+    --profile-menu-color:#f7f7fa;
+    --comman-name-color:#1d1d1d;
+    --profile-name-font:'Roboto', sans-serif;
+    --menu-icon-color:#858ba8;
+    --comman-font:'Poppins', sans-serif;
+    --student-name:#febd2f;
+    --black-color:#333333;
+    --heading-font:  'Roboto', sans-serif;
+    --details-field-label:#657686;
+    --input-field-color:#f4f8fb;
+    --validation-error:#E91100;
+
+}
+
+
+.student-profile-section{
+    width: 100%;
+}
+.student-profile-section header{
+    width: 90%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+.student-profile-section header .heading{
+    font-size: 1.2rem;
+    font-family: var(--comman-font);
+    font-weight: 600;
+    color:#333;
+    text-transform: capitalize;
+    padding-left: 2px;
+}
+.student-profile-section header .page-path{
+    font-size: 1rem;
+    font-family: var(--comman-font);
+    color: #333333;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+.student-profile-section header .page-path .current-path{
+    color: #6c757d;
+}
+.student-profile-section .profile-template{
+    width: 90%;
+    margin: auto;
+    margin-top: 20px;
+    background-color: #f2f3f3;
+
+}
+.student-profile-section .profile-template .profile-container{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    box-sizing: border-box;
+    padding: 1.5rem;
+}
+.student-profile-section .profile-template .profile-container .profile{
+    width: 100%;
+    align-items: center;
+   
+    display: flex;
+}
+.student-profile-section .profile-template .profile-container .profile .profile-image{
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+}
+.student-profile-section .profile-template .profile-container .profile .profile-image img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+.student-profile-section .profile-template .profile-container .profile .profile-details{
+    margin-top: 25px;
+    margin-left: 50px;
+
+}
+.student-profile-section .profile-template .profile-container .profile .profile-details
+ .student-name{
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-family:'Roboto', sans-serif;
+    text-transform: capitalize;
+    font-weight: 500;
+    color:#000000;
+}
+.student-profile-section .profile-template .profile-container .profile .profile-details 
+.student-branch{
+    font-size: 1rem;
+    text-transform: capitalize;
+    font-family: var(--comman-font);
+    font-weight: 600;
+    padding-top: 3px;
+    color: #6c757d;
+    padding-left: 2px;
+}
+.student-profile-section .profile-template .profile-container .profile .profile-details
+ .student-lavel{
+    font-size: 0.7rem;
+    font-family:'Roboto', sans-serif;
+    font-weight: 600;
+    text-transform: capitalize;
+    color: #6c757d;
+    padding-top: 3px;
+    padding-left: 2px;
+}
+.student-profile-section .profile-template  .profile-footer .edite-button{
+    width: 70px;
+    height: 35px;
+    margin-left: 10px;
+    
+}
+.student-profile-section .profile-template  .profile-footer .edite-button button{
+    width: 70px;
+    height: 35px;
+    background-color: var(--comman-color);
+    border: none;
+    color: #fff;
+    border-radius: 3px;
+    text-transform: capitalize;
+    font-family: var(--comman-font);
+    font-weight: 600;
+    cursor: pointer;
+    letter-spacing: 1px;
+   
+}
+.student-profile-section .profile-template .profile-footer{
+    width: 100%;
+    height: 60px;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+}
+.student-profile-section .profile-details-template{
+    width: 650px;
+    height: 280px;
+    background-color: #fff;
+    border: 1px solid rgb(244, 248, 251);
+    margin-top: 20px;
+    margin-left: 50px;
+    border-radius: 13px;
+}
+.student-profile-section .profile-details-template .header{
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    box-sizing: border-box;
+}
+.student-profile-section .profile-details-template .header .heading{
+    text-transform: capitalize;
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: var(--black-color);
+    font-family: var(--heading-font);
+}
+.student-profile-section .profile-details-template .header  .active-logo .icon{
+ 
+    color: var(--comman-color);
+}
+.student-profile-section .profile-details-template .details-container{
+    width:90%;
+    height: 230px;
+    box-sizing: border-box;
+    margin: auto;
+}
+.student-profile-section .profile-details-template .details-container .detail{
+    display: flex;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+.student-profile-section .profile-details-template .details-container .detail:nth-child(1){
+    margin-top: 0px;
+}
+/* .student-profile-section .profile-details-template .details-container .detail:nth-child(5){
+    width: 240px;
+} */
+.student-profile-section .profile-details-template .details-container .detail .label{
+    text-transform: capitalize;
+    font-size: 15px;
+    color: #757575;
+    margin-right: 15px;
+}
+.student-profile-section .profile-details-template .details-container .detail .value{
+    font-size: 15px;
+    color: #333333;
+    text-transform: capitalize;
+}
+.student-profile-section .profile-details-template .details-container .detail:nth-child(1) .value{
+    padding-left: 52px;
+}
+.student-profile-section .profile-details-template .details-container .detail:nth-child(2) .value{
+    padding-left: 5px;
+}
+.student-profile-section .profile-details-template .details-container .detail:nth-child(3) .value{
+    padding-left: 35px;
+}
+.student-profile-section .profile-details-template .details-container .detail:nth-child(4) .value{
+    padding-left: 38px;
+}
+.student-profile-section .profile-details-template .details-container .detail:nth-child(5) .value{
+    padding-left: 33px;
+}
+.student-profile-section  .update-profile-template{
+    width: 85%;
+    height: 600px;
+    background-color: #fff;
+    margin: auto;
+    border: 1px solid rgba(0,0,0,.125);
+    position: absolute;
+    top: -100%;
+    left: 50%;
+    transform: translate(-50%,-90%);
+    transition: all ease .5s;
+}
+.student-profile-section  .update-profile-template .header{
+    width: 100%;
+}
+.student-profile-section  .update-profile-template .header nav{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.student-profile-section  .update-profile-template .header nav .heading{
+    font-size: 1rem;
+    padding: 10px;
+    text-transform: capitalize;
+    font-family: var(--heading-font);
+    color: #6c757d;
+}
+.student-profile-section  .update-profile-template .header nav .close-icon{
+    padding: 10px;
+}
+.student-profile-section  .update-profile-template .header nav .close-icon .icon{
+    color: #6c757d;
+    cursor: pointer;
+}
+.student-profile-section  .update-profile-template .header .divider-line{
+    width: 100%;
+    height: 1px;
+    background-color:rgba(0,0,0,0.1);
+    margin: auto;
+}
+.student-profile-section  .update-profile-template  .upload-image-section{
+    width: 100%;
+    height: 100px;
+
+}
+.student-profile-section  .update-profile-template  .image-upload-section .image-upload-box{
+    width: 200px;
+    height: 160px;
+    margin: auto;
+    margin-top: 30px;
+}
+.student-profile-section  .update-profile-template  .image-upload-section .image-upload-box .image{
+    width: 150px;
+    height:150px;
+    border-radius: 50%;
+    margin: auto;
+    position: relative;
+    background-color: var(--comman-color);
+}
+.student-profile-section  .update-profile-template  .image-upload-section .image-upload-box
+ .image .user-logo{
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%,-35%);
+}
+.student-profile-section  .update-profile-template  .image-upload-section .image-upload-box
+ .image .user-logo img{
+    width: 100%;
+    height: 100%;
+ }
+.student-profile-section  .update-profile-template  .image-upload-section .image-upload-box
+ .image .upload-icon{
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #F4F8FB;
+    position: absolute;
+    bottom: 10px;
+    right: 18px;
+    border-radius: 50%;
+ }
+ .student-profile-section  .update-profile-template  .image-upload-section .image-upload-box
+ .image .upload-icon .icon{
+    color: var(--comman-color);
+ }
+
+ .student-profile-section  .update-profile-template  .navigation-links{
+    width: 100%;
+
+ }
+ 
+ .student-profile-section  .update-profile-template  .navigation-links .links{
+    width: 80%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+ }
+ .student-profile-section  .update-profile-template  .navigation-links .links ul{
+    list-style: none;
+    display: flex;
+ }
+ .student-profile-section  .update-profile-template  .navigation-links .links ul li{
+    padding: 12px 38px;
+ }
+ .student-profile-section  .update-profile-template  .navigation-links .links ul li a{
+    text-transform: capitalize;
+    font-size: 1rem;
+    font-family: var(--heading-font);
+    font-weight: 500;
+    color: #333;
+    position: relative;
+ }
+ .student-profile-section  .update-profile-template  .navigation-links .links ul li  .active-link-text{
+    color: var(--comman-color);
+ }
+ .student-profile-section  .update-profile-template  .navigation-links .links ul li .active::after{
+   content: "";
+   width: 100%;
+   height: 4px;
+   background-color: #3D5EE1;
+   position: absolute;
+   top: 25px;
+   left: 0px;
+ }
+
+ .student-profile-section  .update-profile-template  .personal-details-form{
+    width: 90%;
+    margin: auto;
+    margin-top: 30px;
+    
+ }
+ .student-profile-section  .update-profile-template  .personal-details-form .form-scroller{
+    width: 100%;
+    height: 200px;
+    overflow-y: scroll;
+ }
+ .student-profile-section  .update-profile-template .personal-details-form .form-scroller .form-container{
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+    flex-wrap: wrap;
+ 
+ }
+ .student-profile-section  .update-profile-template  .personal-details-form .form-scroller .form-container
+  .form-field{
+    width: 260px;
+    height: 35px;
+    margin-bottom: 45px;
+    margin-right: 13px;
+
+ }
+ .student-profile-section  .update-profile-template  .personal-details-form .form-scroller .form-container
+ .form-field select{
+    width: 100%;
+    height: 100%;
+    background-color: rgb(244, 248, 251);
+    box-shadow: none !important;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgb(209, 209, 209);
+    border-image: initial;
+    outline: none;
+    color: #555;
+    text-transform: capitalize;
+    padding-left: 5px;
+    box-sizing: border-box;
+ }
+ .student-profile-section  .update-profile-template  .personal-details-form .form-scroller .form-container
+ .form-field .validation-error{
+    font-size: 0.7rem;
+    color: var(--validation-error);
+    text-transform: capitalize;
+ }
+ .student-profile-section  .update-profile-template  .personal-details-form .form-scroller .form-container
+ .form-field .label{
+    text-transform: capitalize;
+    font-size: 1rem;
+    font-family: var(--heading-font);
+    color: var(--details-field-label);
+    padding-left: 1px;
+    margin-bottom: 7px;
+ }
+ .student-profile-section  .update-profile-template  .personal-details-form .form-scroller .form-container
+ .form-field input{
+    width: 100%;
+    height: 35px;
+    background-color: rgb(244, 248, 251);
+    box-shadow: none !important;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgb(209, 209, 209);
+    border-image: initial;
+    outline: none;
+    padding-left: 10px;
+    box-sizing: border-box;
+ }
+ .student-profile-section  .update-profile-template  .personal-details-form .form-scroller .form-container
+ .form-address-field{
+    width:100%;
+    height: 35px;
+    margin-bottom: 45px;
+    
+ }
+ .student-profile-section  .update-profile-template  .personal-details-form .form-scroller .form-container
+ .form-address-field .validation-error{
+    font-size: 0.7rem;
+    color: var(--validation-error);
+    text-transform: capitalize;
+ }
+ .student-profile-section  .update-profile-template  .personal-details-form .form-scroller .form-container
+ .form-address-field  .label{
+    text-transform: capitalize;
+    font-size: 1rem;
+    font-family: var(--heading-font);
+    color: var(--details-field-label);
+    padding-left: 1px;
+    margin-bottom: 7px;
+ }
+ .student-profile-section  .update-profile-template  .personal-details-form .form-scroller .form-container
+ .form-address-field input{
+    width: 100%;
+    height: 35px;
+    background-color: rgb(244, 248, 251);
+    box-shadow: none !important;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgb(209, 209, 209);
+    border-image: initial;
+    outline: none;
+    padding-left: 10px;
+    box-sizing: border-box;
+ }
+ .student-profile-section  .update-profile-template  .personal-details-form .form-btns{
+    width: 100%;
+    margin-top: 10px;
+   
+ }
+ .student-profile-section  .update-profile-template  .personal-details-form .form-btns button{
+    height: 38px;
+    width: 100px;
+    border: none;
+    border: 1px solid var(--comman-color);
+    float: right;
+    margin-right: 30px;
+    color: #fff;
+    text-transform: capitalize;
+    background-color: transparent;
+    color: var(--comman-color);
+    cursor: pointer;
+    transition: all ease 0.5s;
+
+ }
+ .student-profile-section  .update-profile-template  .personal-details-form .form-btns button:hover{
+    background-color: var(--comman-color);
+    border: 1px solid var(--comman-color);
+    color:#fff;
+ }

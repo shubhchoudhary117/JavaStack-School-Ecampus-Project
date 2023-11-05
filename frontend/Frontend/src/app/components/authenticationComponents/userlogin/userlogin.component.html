@@ -1,0 +1,41 @@
+<section class="user-login-section">
+    <div class="background-image">
+        <header>
+            <div class="logo"><img src="../../../../assets/photos/collageLogo.png" alt="image is loading...."></div>
+        </header>
+        <div class="login-box">
+            <div class="login-wrapper">
+                <div class="heading">login</div>
+                <form (ngSubmit)="doLogin()">
+                <div class="login-fields">
+                    <div class="form-field">
+                        <input  type="text" name="username" [(ngModel)]="loginData.username" id="username" placeholder="username">
+                        <p  class="validation-error" *ngIf="usernameFieldEmpty">username is required</p>
+                        <p  class="validation-error" *ngIf="allFieldsEmpty">username is required</p>
+                    </div>
+                    <div class="form-field">
+                        <input  type="text" name="password" [(ngModel)]="loginData.password" id="password" placeholder="password">
+                        <p class="validation-error" *ngIf="passwordFieldEmpty">please enter password</p>
+                        <p  class="validation-error" *ngIf="allFieldsEmpty">please enter required</p>
+                    </div>
+                    <div class="generate-captcha">
+                        <div class="read-captcha">{{captcha}}</div>
+                        <div class="reload-captcha"><button (click)="reloadCaptcha()" type="button"><span>reload captcha</span></button></div>
+                    </div>
+                    <div class="form-field">
+                        <input  type="text" name="captcha" [(ngModel)]="loginData.captcha" id="captcha" placeholder="captcha">
+                        <p class="validation-error" *ngIf="captchaFieldEmpty">please enter captcha</p>
+                        <p  class="validation-error" *ngIf="allFieldsEmpty">please enter captcha</p>
+                    </div>
+                    <div class="form-button">
+                        <button type="submit">login</button>
+                    </div>
+
+                </div>
+            </form>
+            </div>
+        </div>
+        <!-- end of login section --------------------------------------------- -->
+    </div>
+    
+</section>

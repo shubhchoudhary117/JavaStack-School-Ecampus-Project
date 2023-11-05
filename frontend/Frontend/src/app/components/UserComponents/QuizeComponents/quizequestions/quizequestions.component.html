@@ -1,0 +1,94 @@
+<section class="test-questions-section">
+    
+    <div class="quize-result" *ngIf="quizeSubmited">
+        <div class="result-container">
+            <div class="heading">quize result</div>
+            <div class="result-wrapper">
+                <div class="result">
+                    <div class="label">your Score:</div>
+                    <div class="value">{{studentPoints}}% ({{studentPoints}} points)</div>
+                </div>
+                <div class="result">
+                    <div class="label">Passing Score:</div>
+                    <div class="value">32% (32 points)</div>
+                </div>
+            </div>
+            <div class="divider"></div>
+            <div class="passing-instruction">
+                <div class="result-box">
+                    <div class="label">result:</div>
+                    <div class="value" *ngIf="Fail"><mat-icon class="fail-icon" >clear</mat-icon>you did not pass</div>
+                    <div class="value" *ngIf="Pass"><mat-icon class="pass-icon" >done</mat-icon>you are pass</div>
+                </div>
+            </div>
+            <div class="message" *ngIf="studentIsFail">I apologize for this time for not getting up
+                 to the mark. Give our reason for not getting good marks; this is an example given by
+                our side. Please forgive me ma’am for not doing well in my exam, I promise I will
+                take care of it in the future and will try not to repeat it again.
+            </div>
+            <div class="message" *ngIf="studentIsPass">
+                Congratulations on passing your tests! I’m hoping that this is only the start of a
+                 successful career!
+            </div>
+            <div class="message" *ngIf="studentIsExcelentPass">Congratulations on your excellent performance. You easily passed the
+                 test, demonstrating that you are not only big on talk but also capable of following 
+                 through on your commitments.</div>
+            <div class="button">
+                <button [routerLink]="['/student/dashboard/quize-test']" mat-raised-button color="primary">go to quize</button>
+            </div>
+        </div>
+    </div>
+    <div class="test-questions-container" *ngIf="!quizeSubmited">
+        <div class="test-question-header" *ngIf="!activeLoader">
+            <div class="border"></div>
+            <div class="heading">
+                science fundamentals quize 2023
+            </div>
+            <div class="divider"></div>
+            <div class="email">shubhamchoudhary8020@gmail.com</div>
+            <div class="required">required*</div>
+        </div>
+        <div class="questions">
+            <!-- question ----------------------------------------------- -->
+            <div class="question-card" *ngFor="let question of questions;let i=index">
+                <div class="form-group">
+                    <div class="question"><span style="margin-right: 3px;">Q.{{i+1}}</span> {{question.content}}</div>
+                    <div class="option-label">
+                        <input [(ngModel)]="question.givenAnswer" [value]="question.option1" type="radio" name="{{i}}">
+                        <div class="label">{{question.option1}}</div>
+                    </div>
+                    <div class="option-label">
+                        <input [(ngModel)]="question.givenAnswer" [value]="question.option2" type="radio"  name="{{i}}">
+                        <div class="label">{{question.option2}}</div>
+                    </div>
+                    <div class="option-label">
+                        <input [(ngModel)]="question.givenAnswer" [value]="question.option3" type="radio"  name="{{i}}">
+                        <div class="label">{{question.option3}}</div>
+                    </div>
+                    <div class="option-label">
+                        <input [(ngModel)]="question.givenAnswer" [value]="question.option4" type="radio"  name="{{i}}">
+                        <div class="label">{{question.option4}}</div>
+                    </div>
+                </div>
+
+            </div>
+            <!-- question --------------------------------------------------- -->
+
+
+        </div>
+        <div class="buttons" *ngIf="!activeLoader">
+            <button mat-raised-button color="primary" (click)="doSubmitExam()">submit</button>
+            <button mat-button>clear</button>
+        </div>
+    </div>
+
+
+    <div class="loader-layer" *ngIf="activeLoader">
+        <div class="loader" >
+            <ngx-spinner class="spinner"    [name]="spinnerName"
+             [type]="spinnerType" color="#3D5EE1" size="medium"></ngx-spinner>
+        </div>
+    </div>
+    
+</section>
+

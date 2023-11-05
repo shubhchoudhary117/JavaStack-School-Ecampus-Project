@@ -1,0 +1,88 @@
+<section class="profile-section">
+    <div class="profile-card" *ngIf="!activeLoader">
+        <div class="header">
+            <div class="profile-image"><img src="../../../assets/photos/user.webp"
+                    alt="image is loading please weait.....">
+            </div>
+            <div class="profile-content">
+                <div class="profile-details">
+                    <h4 class="admin-name">{{Teacher.teacherName}}</h4>
+                    <p class="admin-lavel"></p>
+                </div>
+                <div class="about-admin">
+                    <h5 class="heading">about</h5>
+                    <p class="about-admin-description">{{Teacher.aboutTeacher}}</p>
+                </div>
+            </div>
+            <div class="admin-education">
+                <h4 class="highest-qualification">highest qualification</h4>
+                <h6 class="qualification">{{Teacher.teacherQualifications}}</h6>
+            </div>
+            <div class="teaching-experience">
+                <h4 class="experience-heading">experience</h4>
+                <h6 class="experience-year">{{Teacher.teacherExperience}}</h6>
+            </div>
+         
+        </div>
+        <div class="job-details-section">
+            <div class="job-details">
+                <div class="heading"><mat-icon class="icon">school</mat-icon>job details</div>
+                <div class="details">
+                    <ul>
+                        <li>
+                            <p class="detail"><span class="type">employeement type :</span>{{Teacher.teacherJobType
+                            }}</p>
+                        </li>
+                        <li>
+                            <p class="detail"><span class="type">joining date :</span>{{Teacher.teacherJoiningDate}}</p>
+                        </li>
+                        <li>
+                            <p class="detail"><span class="type">email :</span>{{Teacher.teacherEmail}}</p>
+                        </li>
+                        <li>
+                            <p class="detail"><span class="type">mobile :</span>+91 {{Teacher.teacherMobile}}</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="other-details">
+                <div class="heading"><mat-icon class="icon">info</mat-icon>other</div>
+                <div class="details">
+                    <ul>
+                        <li>
+                            <p class="detail"><span class="type">employeement role :</span>{{Teacher.teacherRole}}</p>
+                        </li>
+                        <li>
+                            <p class="detail"><span class="type">stutas:</span>{{Teacher.teacherStatus}}</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="ranking-box">
+                <div class="circular-reprogress" id="progress-circular"></div>
+                <div class="value" >{{rank}}%</div>
+                <div class="label">ranking in institute</div>
+            </div>
+        </div>
+        <!-- <footer>
+            <div class="social-links">
+                <ul>
+                    <li><mat-icon>facebook</mat-icon></li>
+                    <li><mat-icon>twitter</mat-icon></li>
+                </ul>
+            </div>
+        </footer> -->
+    </div>
+
+    <div class="back-icon-div">
+        <div class="icon-wrapper"><mat-icon class="icon" [routerLink]="['/student/dashboard/teachers']">keyboard_backspace</mat-icon></div>
+    </div>
+
+    <!-- update profile template -------------------------------------------------- -->
+    <!-- <div class="loader-layer" *ngIf="activeLoader">
+        <div class="loader" >
+            <ngx-spinner class="spinner"    [name]="spinnerName"
+             [type]="spinnerType" color="#3D5EE1" size="medium"></ngx-spinner>
+        </div>
+    </div> -->
+</section>

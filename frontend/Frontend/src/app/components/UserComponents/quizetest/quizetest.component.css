@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+::ng-deep :root{
+    --comman-color:#3D5EE1;
+    --comman-white-color:#fff;
+    --profile-menu-color:#f7f7fa;
+    --comman-name-color:#1d1d1d;
+    --profile-name-font:'Roboto', sans-serif;
+    --menu-icon-color:#858ba8;
+    --comman-font:'Poppins', sans-serif;
+    --student-name:#febd2f;
+    --black-color:#333333;
+    --heading-font:  'Roboto', sans-serif;
+    --details-field-label:#657686;
+    --input-field-color:#f4f8fb;
+
+    --heading-color:#757575;
+
+}
+
+.quizes-section{
+    width: 98%;
+    padding: 10px;
+    background-color: #fff;
+    box-sizing: border-box;
+    margin-left: 25px;
+    margin-top: 12px;
+}
+.quizes-section .quizes-container{
+    width: 100%;
+    margin: auto;
+}
+.quizes-section .quizes-container .heading{
+    font-size: 1.3rem;
+    font-family: var(--heading-font);
+    color: var(--heading-color);
+    padding: 10px;
+    font-weight: 400;
+}
+.quizes-section .quizes-container .quizes-wrapper{
+    width: 100%;
+    display: flex;
+    justify-content:center;
+    flex-wrap: wrap;
+
+}
+.quizes-section .quizes-container .quizes-wrapper .mat-card{
+    width: 300px;
+    height: 130px;
+    margin: 10px;
+}
+
+.quizes-section .quizes-container .quizes-wrapper .mat-card .card-header{
+    width: 100%;
+}
+.quizes-section .quizes-container .quizes-wrapper .mat-card .header-image{
+   
+    background-image: url("../../../../assets/photos/test.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.quizes-section .quizes-container .quizes-wrapper .mat-card .card-header .quize-title{
+ 
+    text-transform: capitalize;
+}
+.quizes-section .quizes-container .quizes-wrapper .mat-card .card-buttons{
+    width: 85%;
+    margin-left: 30px;
+  
+}
+.quizes-section .quizes-container .quizes-wrapper .mat-card .card-buttons button{
+   
+    text-transform: capitalize;
+    text-transform: capitalize;
+}

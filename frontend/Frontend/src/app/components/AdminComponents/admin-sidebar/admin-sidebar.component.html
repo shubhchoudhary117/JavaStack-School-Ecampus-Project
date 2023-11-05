@@ -1,0 +1,58 @@
+
+<div class="side-bar">
+    <div class="header">
+        <div class="logo">
+            <img src="../../../../assets/photos/usernabarlogo.png" alt="image is loading">
+            <h6 class="logo-name">Swarja ecampus</h6>
+        </div>
+    </div>
+    <div class="menus-part">
+        <ul>
+            <li class=" link-li active-menu">
+                <div class="icon-div"><mat-icon class="icon ">person</mat-icon></div>
+                <div class="link " [routerLink]="['/admin/dashboard/profile']">profile</div>
+            </li>
+            <li class=" link-li ">
+                <div class="icon-div"><mat-icon class="icon">chrome_reader_mode</mat-icon></div>
+                <div class="link" [routerLink]="['/admin/dashboard/add-news']">add news</div>
+            </li>
+            <li class=" link-li ">
+                <div class="icon-div"><mat-icon class="icon">chrome_reader_mode</mat-icon></div>
+                <div class="link" [routerLink]="['/admin/dashboard/add-student']">add student</div>
+            </li>
+            <li class="link-li">
+                <mat-icon class="icon-div">quize</mat-icon>
+                <div class="sub-menus">
+                    <h6 class="link" mat-button [matMenuTriggerFor]="animals">Quizes</h6>
+                    <mat-menu #animals="matMenu">
+                        <button mat-menu-item [matMenuTriggerFor]="category">category</button>
+                        <button mat-menu-item [matMenuTriggerFor]="quizes">quizes</button>
+                    </mat-menu>
+
+                    <mat-menu #category="matMenu">
+                        <button mat-menu-item  [routerLink]="['/admin/dashboard/add-category']">add category</button>
+                        <button mat-menu-item [routerLink]="['/admin/dashboard/show-category']">show category</button>
+                    </mat-menu>
+                
+                  
+
+                    <mat-menu #quizes="matMenu">
+                        <button mat-menu-item [routerLink]="['/admin/dashboard/add-quize']">add quize</button>
+                        <button mat-menu-item [routerLink]="['/admin/dashboard/show-quizes']">show quizes</button>
+                    </mat-menu>
+                    
+                </div>
+            </li>
+        
+            <!-- <li class=" link-li">
+                <div class="icon-div"><mat-icon class="icon">email</mat-icon></div>
+                <div class="link" [routerLink]="['/admin/dashboard/do-email']">send mail</div>
+            </li> -->
+            <li class=" link-li">
+                <div class="icon-div"><mat-icon class="icon">logout</mat-icon></div>
+                <div class="link" >logout</div>
+            </li>
+        </ul>
+    </div>
+</div>
+

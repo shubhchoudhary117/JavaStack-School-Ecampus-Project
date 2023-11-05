@@ -1,0 +1,56 @@
+
+
+<header>
+    <nav>
+        <div class="search-bar"> 
+            <div class="search-field">
+                <div class="search-btn"><mat-icon  class="search-icon">search</mat-icon></div>
+                <input type="text" placeholder="start search">
+            </div>
+        </div>
+        <div class="right-side-menus">
+            <div class="other-menus">
+                <div class="icon-menus">
+                    <div class="notification-menu">
+                        <mat-icon  class="profile-showing-icon">notifications_none</mat-icon>
+                    </div>
+                </div>
+            </div>
+        <div class="profile-menu">
+            <div class="profile-container">
+                <div class="profile-image">
+                    <img src="../../../../assets/photos/user.webp" alt="image is loading">
+                </div>
+                <div class="profile-content">
+                    <div class="student-name">shubh choudhary</div>
+                    <div class="profile-link">Student</div>
+                </div>
+                <div class="show-profile-icon" id="show-profile-icon-wrapper">
+                    <mat-icon   class="profile-showing-icon" 
+                    id="show-profile-icon">keyboard_arrow_up</mat-icon>
+                    <mat-icon   class="profile-showing-icon" 
+                    id="hide-profile-icon">keyboard_arrow_down</mat-icon>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="show-profile-popup-box" id="profile-popup">
+        <div class="wrapper">
+            <div class="header">
+                <div class="image"><img src="../../../../assets/photos/user.webp" alt="image is loading"></div>
+                <div class="student-name-branch">
+                    <div class="name">shubham choudhary</div>
+                    <div class="branch">B.tech cs-6sem</div>
+                </div>
+            </div>
+            <!-- <div class="actions">
+                <div class="item" (click)="closePopup()" [routerLink]="['/student/dashboard/profile']">profile</div>
+                <div class="item" (click)="logoutUser()">logout</div>
+            </div> -->
+        </div>
+    </div>
+    </nav>
+</header>
+
+
+
